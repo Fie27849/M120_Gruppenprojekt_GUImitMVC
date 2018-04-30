@@ -37,4 +37,9 @@ public class Controller {
 		this.dreiDPunkteModel = new dreieck3d();
 		this.ticTacToeModel = new TicTacToe();
 	}
+	
+	public void dreieck3d() 
+	{
+		
+	}
 }
