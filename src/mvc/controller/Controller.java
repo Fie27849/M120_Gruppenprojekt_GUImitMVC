@@ -32,9 +32,14 @@ public class Controller {
 		this.dreiDPunkteView = new dreiDPunkteView();
 		this.benzinRechnerView = new BenzinRechnerView();
 		
-		this.verschluesselungsModel = new TextVerschluesseln(false);
+		this.verschluesselungsModel = new TextVerschluesseln();
 		this.benzinRechnerModel = new BenzinRechner();
 		this.dreiDPunkteModel = new dreieck3d();
 		this.ticTacToeModel = new TicTacToe();
+	}
+	
+	public String translateText(String text){
+		String verschText = verschluesselungsModel.verschluesseln(text);
+		return verschText;
 	}
 }

@@ -9,106 +9,23 @@ import java.util.Scanner;
 
 public class TextVerschluesseln implements StdFilesLoc{
 	
-	/**
-	 * Klassenvariablen
-	 */
-	private String filename;
 	private String text = "";
 	private String verschluesselterText = "";
-	private String decodierterText = "";
-	private String pwd;
-	int zpwd;
-	int auswahl;
+	private String pwd = "passwort";
 	private char[] charArray = {};
 	private char[] pwdArray = {};
-	boolean testing = true;
-	int testMethod = 0;
-	int testergebnis = 0;
-	Scanner scan = new Scanner(System.in);
+	int zpwd;
 	
-	/**
-	 * Konstruktor mit @param testing Parameter
-	 */
-	public TextVerschluesseln(boolean testing){
-		this.testing = testing;
-		if(testing){
-			System.out.println("\n###########################");
-			System.out.println("Testing Textverschlüsselung");
-			System.out.println("###########################\n");
-			pwd = "test";
-			filename = "versch.txt";
-			auswahl = 1;
-			eingabe();
-			testMethod++;
-			text = "Dies ist ein Test Text";
-			auswahl = 2;
-			verschluesselterText = "";
-			decodierterText = "";
-			zpwd = 0;
-			eingabe();
-		}else{
-			eingabe();
-		}
+	public TextVerschluesseln(){
+		
 	}
-	/**
-	 * Konstruktor mit @param text Parameter
-	 */
+	
 	public TextVerschluesseln(String text){
 		this.text = text;
 		verschluesseln(text);
 	}
-	/**
-	 * Menuefuehrung mit Usereingabe und File lesen
-	 */
-	public void eingabe(){
-		if(testing == false){
-			System.out.println("Möchten Sie eine Eingabe über ein Text file oder per Tastatur Eingabe? 1 für File, 2 für Tastatur");
-			auswahl = scan.nextInt();
-		}		
-		if(auswahl == 1){
-			if(testing == false){
-				System.out.println("Bitte speichern Sie das File im input Ordner ab und geben Sie den Filename an. Beispiel: text.txt");
-				filename = scan.next();
-			}
-			File mytext = new File(input.toString(), filename);
-			
-			try {
-				BufferedReader br = new BufferedReader(new FileReader(mytext));
-				String line;
-			    while ((line = br.readLine()) != null) {
-	                System.out.println(line);
-	                text +=  line;
-	            }
-	        } catch (IOException e) {
-	            System.out.println("File existiert nicht");
-	            eingabe();
-	        } 
-			
-			verschluesseln(text);
-		}
-		
-		if (auswahl == 2){
-			if(testing == false){
-				System.out.println("Bitte geben Sie den zu verschlüsselnden text ein\n");
-				scan.nextLine();
-				text = scan.nextLine();
-			}
-			verschluesseln(text);
-		}
-		if(auswahl > 2 || auswahl < 1){
-			System.out.println("falsche Eingabe, versuchen Sie es nochmals");
-			eingabe();
-		}
-		
-	}
-	/**
-	 * Methode verschluesseln mit @param Text
-	 */
-	public void verschluesseln(String Text){
-		if(testing == false){
-			System.out.println("Bitte geben Sie das Passwort für die Verschlüsselung ein");
-			pwd = scan.next();
-		}
+	
+	public String verschluesseln(String Text){
 		
 		pwdArray = pwd.toCharArray();
 		charArray = text.toCharArray();
@@ -125,9 +42,38 @@ public class TextVerschluesseln implements StdFilesLoc{
 		for(int i = 0; i < charArray.length; i++){
 			verschluesselterText += charArray[i];
 		}
-		ausgabe(verschluesselterText, 1);
-		decoder(charArray);
+		return verschluesselterText;
 	}
+	
+	
+	
+	
+	/**
+	 * Klassenvariablen
+	 */
+	private String filename;
+
+	private String decodierterText = "";
+
+
+	boolean testing = true;
+	int testMethod = 0;
+	int testergebnis = 0;
+	Scanner scan = new Scanner(System.in);
+
+	/**
+	 * Konstruktor mit @param testing Parameter
+	 */
+
+
+	/**
+	 * Menuefuehrung mit Usereingabe und File lesen
+	 */
+
+	/**
+	 * Methode verschluesseln mit @param Text
+	 */
+	
 	/**
 	 * Methode decoder mit @param charArray
 	 */
