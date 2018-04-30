@@ -42,4 +42,9 @@ public class Controller {
 		String verschText = verschluesselungsModel.verschluesseln(text);
 		return verschText;
 	}
+		
+	public void dreieck3d() 
+	{
+		
+	}
 }
