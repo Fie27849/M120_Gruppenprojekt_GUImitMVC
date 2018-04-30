@@ -10,6 +10,7 @@ public class Controller {
 	private MainView mainView;
 	private TicTacToeView ticTacToeView;
 	private VerschluesselungsView verschluesselungsView;
+	private dreiDPunkteView dreiDPunkteView;
 	
 	//Models
 	private TextVerschluesseln verschluesselungsModel;
