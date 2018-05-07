@@ -37,14 +37,14 @@ public class BenzinRechnerController {
 	
 	
 
-	private BenzinRechner mymodel = new BenzinRechner("Benzinrechner");
-	private view myView = new view("benzinrechner.fxml", "Benzinrechner");
+	private BenzinRechner BenzinRechnerModel = new BenzinRechner("Benzinrechner");
+	private BenzinRechnerView BenzinRechnerView = new BenzinRechnerView("benzinrechner.fxml", "Benzinrechner");
 
 	@FXML
 	public void handleButtonClick(ActionEvent event) throws IOException {
 		switch (((Node) event.getSource()).getId()) {
 		case "btn_kmMitTankVoll":
-			this.myView.kmMitTankVoll();
+			this.BenzinRechnerView.kmMitTankVoll();
 			break;
 			
 			
