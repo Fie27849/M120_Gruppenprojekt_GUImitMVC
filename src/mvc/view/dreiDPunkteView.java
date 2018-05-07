@@ -7,8 +7,12 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-public class dreiDPunkteView 
+public class dreiDPunkteView extends view
 {
+	public dreiDPunkteView(String linktofxml, String Title) {
+		super(linktofxml, Title);
+	}
+
 	public void start(Stage stage) throws IOException
 	{
 		 Parent root = FXMLLoader.load(getClass().getResource("3dpunkte.fxml"));
