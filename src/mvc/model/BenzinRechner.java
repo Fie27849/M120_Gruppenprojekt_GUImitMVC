@@ -30,6 +30,10 @@ public class BenzinRechner {
 		//Menu();	
 	}
 		
+	public BenzinRechner(String string) {
+		// TODO Auto-generated constructor stub
+	}
+
 	// --------------------------------- GET & SET -----------------------------------------------
 	public double getTankGesamt() {
 		return tankGesamt;
@@ -92,7 +96,7 @@ public class BenzinRechner {
 		return anzNachtanken;
 	}
 	
-	private void restKm(){
+	private void kmMitTankVoll(){
 		
 		tankGesamt = scanner.nextDouble();
 		verbrauchPro100 = scanner.nextDouble();
