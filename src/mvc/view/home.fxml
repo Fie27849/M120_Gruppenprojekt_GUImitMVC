@@ -1,41 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
-<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mvc.controller.Controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mvc.controller.MainController">
    <children>
       <MenuBar prefHeight="29.0" prefWidth="600.0">
         <menus>
-          <Menu mnemonicParsing="false" text="Home">
-            <items>
-              <MenuItem mnemonicParsing="false" text="Close" />
-            </items>
-          </Menu>
-          <Menu mnemonicParsing="false" text="Tic Tac Toe">
-            <items>
-              <MenuItem mnemonicParsing="false" text="Delete" />
-            </items>
-          </Menu>
-          <Menu mnemonicParsing="false" text="Textverschlüsselung">
-            <items>
-              <MenuItem mnemonicParsing="false" text="About" />
-            </items>
-          </Menu>
-            <Menu mnemonicParsing="false" text="3D Punkte">
-              <items>
-                <MenuItem mnemonicParsing="false" text="Action 1" />
-              </items>
-            </Menu>
-            <Menu mnemonicParsing="false" text="Benzinrechner">
-               <items>
-                  <MenuItem mnemonicParsing="false" text="Action 1" />
-               </items>
-            </Menu>
+          <Menu fx:id="home" mnemonicParsing="false" onHiding="#handleMenuClick" onShowing="#handleMenuClick" text="Home" />
+          <Menu fx:id="tictactoe" mnemonicParsing="false" onAction="#handleMenuClick" text="Tic Tac Toe" />
+          <Menu fx:id="textverschluesselung" mnemonicParsing="false" onAction="#handleMenuClick" text="Textverschlüsselung" />
+            <Menu fx:id="punkte3d" mnemonicParsing="false" onAction="#handleMenuClick" text="3D Punkte" />
+            <Menu fx:id="benzinrechner" mnemonicParsing="false" onAction="#handleMenuClick" text="Benzinrechner" />
         </menus>
       </MenuBar>
       <Label layoutX="256.0" layoutY="36.0" text="Toolbox">
@@ -43,5 +23,6 @@
             <Font size="22.0" />
          </font>
       </Label>
+      <Button fx:id="button" layoutX="204.0" layoutY="200.0" mnemonicParsing="false" onAction="#handleMenuClick" text="Button" />
    </children>
 </AnchorPane>
