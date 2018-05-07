@@ -8,8 +8,9 @@ public class dreiDPunkteView extends view
 		super(linktofxml, Title);
 	}
 
-	public void setflaeche(double flaeche, Label output)
+	public void setflaeche(Double flaeche, Label output)
 	{
+		output.setText(flaeche.toString());
 		
 	}
 	
