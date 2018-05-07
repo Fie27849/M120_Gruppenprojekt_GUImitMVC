@@ -8,40 +8,55 @@ import javafx.fxml.FXML;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.Menu;
+import javafx.scene.control.MenuItem;
 import javafx.scene.control.TextField;
+import mvc.model.TextVerschluesseln;
 import mvc.template.model;
 import mvc.template.view;
+import mvc.view.BenzinRechnerView;
+import mvc.view.TicTacToeView;
+import mvc.view.VerschluesselungsView;
+import mvc.view.dreiDPunkteView;
 
 public class MainController {
 	
 	@FXML
-	private Menu punkte3d;
+	private MenuItem punkte3d;
 	@FXML
-	private Menu home;
+	private MenuItem home;
 	@FXML
-	private Menu tictactoe;
+	private MenuItem tictactoe;
 	@FXML
-	private Menu textverschluesselung;
+	private MenuItem textverschluesselung;
 	@FXML
-	private Menu benzinrechner;
-	@FXML
-	private Button button;
+	private MenuItem benzinrechner;
 
 	private model mymodel = new model("Home");
-	private view myView = new view("page.fxml", "Page");
-
+	private BenzinRechnerView BenzinRechnerView = new BenzinRechnerView("../view/benzinrechner.fxml", "Benzin Rechner");
+	private TicTacToeView TicTacToeView = new TicTacToeView("../view/tictactoe.fxml", "Tic Tac Toe");
+	private dreiDPunkteView dreiDPunkteView = new dreiDPunkteView("../view/3dpunkte.fxml", "3D Punkte");
+	private VerschluesselungsView verschluesselungsView = new VerschluesselungsView("../view/textverschuesselung.fxml", "Text Verschlüsseln");
+	
 	@FXML
-	public void handleMenuClick(Event event) throws IOException {
-		System.out.println(event);
-		switch (((Node) event.getSource()).getId()) {
-		case "button":
-			System.out.println("test");
+	public void handleMenuClick(ActionEvent event) throws IOException {
+		MenuItem MenuItem = ((MenuItem) event.getSource());
+		switch (MenuItem.getId()) {
+		case "punkte3d":
+			this.dreiDPunkteView.changeScene(event);
 			break;
-		case "page":
+		case "home":
 			break;
-
+		case "tictactoe":
+			break;
+		case "textverschluesselung":
+			this.verschluesselungsView.changeScene(event);
+			break;
+		case "benzinrechner":
+			this.BenzinRechnerView.changeScene(event);
+			break;
 		default:
 			break;
 		}
+		
 	}
 }
