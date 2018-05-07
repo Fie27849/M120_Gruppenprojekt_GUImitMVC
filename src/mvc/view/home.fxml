@@ -3,31 +3,32 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ButtonBar?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.Menu?>
-<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mvc.controller.MainController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mvc.controller.MainController">
    <children>
-      <MenuBar prefHeight="29.0" prefWidth="600.0">
-        <menus>
-          </menus>
-      </MenuBar>
-      <Label layoutX="256.0" layoutY="36.0" text="Toolbox">
-         <font>
-            <Font size="22.0" />
-         </font>
-      </Label>
-      <Button fx:id="button" layoutX="204.0" layoutY="200.0" mnemonicParsing="false" onAction="#handleMenuClick" text="Button" />
-      <ButtonBar layoutX="78.0" layoutY="68.0" prefHeight="40.0" prefWidth="200.0">
+      <ButtonBar layoutY="77.0" prefHeight="40.0" prefWidth="600.0">
         <buttons>
-          <Button fx:id="home" mnemonicParsing="false" onAction="#handleMenuClick" text="Home" />
+          <Button fx:id="home" minWidth="44.0" mnemonicParsing="false" onAction="#handleMenuClick" prefHeight="27.0" text="Home" />
             <Button fx:id="tictactoe" mnemonicParsing="false" onAction="#handleMenuClick" text="Tic Tac Toe" />
-            <Button fx:id="textverschluesselung" mnemonicParsing="false" onAction="#handleMenuClick" text="Textverschlüsselung" />
+            <Button fx:id="textverschluesselung" mnemonicParsing="false" onAction="#handleMenuClick" prefHeight="27.0" prefWidth="152.0" text="Textverschlüsselung" />
             <Button fx:id="punkte3d" mnemonicParsing="false" onAction="#handleMenuClick" text="3D Punkte" />
             <Button fx:id="benzinrechner" mnemonicParsing="false" onAction="#handleMenuClick" text="Benzinrechner" />
         </buttons>
       </ButtonBar>
+      <Label layoutX="256.0" layoutY="49.0" text="Toolbox">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <MenuButton layoutX="14.0" layoutY="14.0" mnemonicParsing="false" text="Home">
+        <items>
+          <MenuItem fx:id="test" mnemonicParsing="false" onAction="#handleMenuClick" text="Tic Tac Toe" />
+          <MenuItem mnemonicParsing="false" text="Action 2" />
+        </items>
+      </MenuButton>
    </children>
 </AnchorPane>
