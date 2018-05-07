@@ -11,21 +11,22 @@ public class TextVerschluesseln implements StdFilesLoc{
 	
 	private String text = "";
 	private String verschluesselterText = "";
+	private String decodierterText = "";
 	private String pwd = "passwort";
 	private char[] charArray = {};
 	private char[] pwdArray = {};
 	int zpwd;
 	
+	
 	public TextVerschluesseln(){
 		
 	}
 	
-	public TextVerschluesseln(String text){
-		this.text = text;
-		verschluesseln(text);
-	}
 	
-	public String verschluesseln(String Text){
+	public String verschluesseln(String text, String pwd){
+		
+		this.text = text;
+		this.pwd = pwd;
 		
 		pwdArray = pwd.toCharArray();
 		charArray = text.toCharArray();
@@ -46,39 +47,15 @@ public class TextVerschluesseln implements StdFilesLoc{
 	}
 	
 	
-	
-	
-	/**
-	 * Klassenvariablen
-	 */
-	private String filename;
-
-	private String decodierterText = "";
-
-
-	boolean testing = true;
-	int testMethod = 0;
-	int testergebnis = 0;
-	Scanner scan = new Scanner(System.in);
-
-	/**
-	 * Konstruktor mit @param testing Parameter
-	 */
-
-
-	/**
-	 * Menuefuehrung mit Usereingabe und File lesen
-	 */
-
-	/**
-	 * Methode verschluesseln mit @param Text
-	 */
-	
-	/**
-	 * Methode decoder mit @param charArray
-	 */
-	private void decoder(char[] charArray){
+	public String decoder(String text, String pwd){
+		
+		this.text = text;
+		this.pwd = pwd;
 		zpwd = 0;
+		
+		pwdArray = pwd.toCharArray();
+		charArray = text.toCharArray();
+		
 		for(int i = 0; i < charArray.length; i++){
 			charArray[i] = (char) (charArray[i] - pwdArray[zpwd]);
 			zpwd++;
@@ -87,27 +64,13 @@ public class TextVerschluesseln implements StdFilesLoc{
 				zpwd = 0;
 			}
 		}
+	
 		for(int i = 0; i < charArray.length; i++){
 			decodierterText += charArray[i];
 		}
-		ausgabe(decodierterText, 2);
+		return decodierterText;
 	}
-	/**
-	 * Methode ausgabe mit:
-	 * @param ausgabe
-	 * @param check
-	 */
-	private void ausgabe(String ausgabe, int check) {
-		if(check == 1){
-			System.out.println("Verschlüsselter Text: " + ausgabe);
-		}
-		else{
-			System.out.println("decodierter Text: " + ausgabe);
-			if(testing){
-				test();
-			}
-		}	
-	}
+	
 	/**
 	 * Methode test
 	 */
