@@ -21,7 +21,7 @@ public class BenzinRechnerController {
 	@FXML
 	private Button btn_literTankenFuerGeplant;
 	@FXML
-	private Button btn_anzKmGeplant;
+	private Button btn_anzTankenKmGeplant;
 	@FXML
 	private Button btn_literAktuell;
 	@FXML
@@ -35,25 +35,33 @@ public class BenzinRechnerController {
 	@FXML
 	private TextArea output_result;
 	
-	
 
 	private BenzinRechner BenzinRechnerModel = new BenzinRechner("Benzinrechner");
 	private BenzinRechnerView BenzinRechnerView = new BenzinRechnerView("benzinrechner.fxml", "Benzinrechner");
 
+	
 	@FXML
 	public void handleButtonClick(ActionEvent event) throws IOException {
 		switch (((Node) event.getSource()).getId()) {
 		case "btn_kmMitTankVoll":
 			this.BenzinRechnerView.kmMitTankVoll();
 			break;
-			
-			
-			
-
+		case "btn_kmMitLiterAktuell":
+			this.BenzinRechnerView.kmMitLiterAktuell();
+			break;
+		case "btn_literAktuell":
+			this.BenzinRechnerView.literAktuell();
+			break;
+		case "btn_literTankenFuerGeplant":
+			this.BenzinRechnerView.literTankenFuerGeplant();
+			break;
+		case "btn_anzTankenKmGeplant":
+			this.BenzinRechnerView.anzTankenKmGeplant();
+			break;
 		default:
 			break;
 		}
 	}
-
+	
 	
 }
