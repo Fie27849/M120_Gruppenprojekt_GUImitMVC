@@ -11,7 +11,6 @@ public class dreiDPunkteView extends view
 	public void setflaeche(Double flaeche, Label output)
 	{
 		output.setText(flaeche.toString());
-		
 	}
 	
 	
