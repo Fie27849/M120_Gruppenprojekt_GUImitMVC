@@ -31,7 +31,7 @@ public class VerschluesselungController {
 	private TextArea codeword;
 
 	private TextVerschluesseln model = new TextVerschluesseln();
-	private VerschluesselungsView view = new VerschluesselungsView();
+	private VerschluesselungsView view = new VerschluesselungsView("textverschlüsselung.fxml","Textverschlüsselung");
 
 	@FXML
 	public void handleButtonClick(ActionEvent event) throws IOException {
