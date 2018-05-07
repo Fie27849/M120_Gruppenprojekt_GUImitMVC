@@ -32,26 +32,30 @@ public class MainController {
 	private MenuItem benzinrechner;
 
 	private model mymodel = new model("Home");
-	private BenzinRechnerView BenzinRechnerView = new BenzinRechnerView("../view/benzinrechner.fxml", "Benzin Rechner");
-	private TicTacToeView TicTacToeView = new TicTacToeView("../view/tictactoe.fxml", "Tic Tac Toe");
-	private dreiDPunkteView dreiDPunkteView = new dreiDPunkteView("../view/3dpunkte.fxml", "3D Punkte");
-	private VerschluesselungsView verschluesselungsView = new VerschluesselungsView("../view/textverschuesselung.fxml", "Text Verschlüsseln");
+	private BenzinRechnerView BenzinRechnerView;
+	private TicTacToeView TicTacToeView;
+	private dreiDPunkteView dreiDPunkteView;
+	private VerschluesselungsView verschluesselungsView;
 	
 	@FXML
 	public void handleMenuClick(ActionEvent event) throws IOException {
 		MenuItem MenuItem = ((MenuItem) event.getSource());
 		switch (MenuItem.getId()) {
 		case "punkte3d":
+			this.dreiDPunkteView = new dreiDPunkteView("../view/3dpunkte.fxml", "3D Punkte");
 			this.dreiDPunkteView.changeScene(event);
 			break;
 		case "home":
 			break;
 		case "tictactoe":
+			this.TicTacToeView = new TicTacToeView("../view/tictactoe.fxml", "Tic Tac Toe");
 			break;
 		case "textverschluesselung":
+			this.verschluesselungsView = new VerschluesselungsView("../view/textverschuesselung.fxml", "Text Verschlüsseln");
 			this.verschluesselungsView.changeScene(event);
 			break;
 		case "benzinrechner":
+			this.BenzinRechnerView = new BenzinRechnerView("../view/benzinrechner.fxml", "Benzin Rechner");
 			this.BenzinRechnerView.changeScene(event);
 			break;
 		default:
