@@ -7,7 +7,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-import mvc.controller.Controller;
+import mvc.controller.BenzinRechnerController;
 
 public class BenzinRechnerView extends view{
 	
@@ -17,7 +17,7 @@ public class BenzinRechnerView extends view{
 	}
 
 
-	Controller controller = new Controller();
+	BenzinRechnerController controller = new BenzinRechnerController();
 	
 	
 	public double kmMitTankVoll(){
