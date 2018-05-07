@@ -22,7 +22,7 @@ public class dreieck3d
 		return gamma;
 	}
 	/**
-	 * Heir werden die drei Seiten a,b,c berechnet.
+	 * Hier werden die drei Seiten a,b,c berechnet.
 	 */
 	public double[] seitenberechnen(int xa, int xb, int xc, int ya, int yb, int yc, int za, int zb, int zc)
 	{
