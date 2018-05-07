@@ -16,9 +16,6 @@ public class BenzinRechnerView extends view{
 		// TODO Auto-generated constructor stub
 	}
 
-
-	BenzinRechnerController controller = new BenzinRechnerController();
-	
 	
 	public double kmMitTankVoll(){
 		double kmMitTankVoll;
