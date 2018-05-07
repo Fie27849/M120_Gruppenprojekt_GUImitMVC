@@ -13,5 +13,4 @@ public class dreiDPunkteView extends view
 		output.setText(flaeche.toString());
 	}
 	
-	
 }

@@ -7,10 +7,7 @@ import javafx.fxml.FXML;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
 import mvc.model.TextVerschluesseln;
-import mvc.template.model;
-import mvc.template.view;
 import mvc.view.VerschluesselungsView;
 
 public class VerschluesselungController {
@@ -47,5 +44,4 @@ public class VerschluesselungController {
 			break;
 		}
 	}
-
 }

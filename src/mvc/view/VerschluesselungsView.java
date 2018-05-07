@@ -1,10 +1,6 @@
 package mvc.view;
 
-import javafx.fxml.FXMLLoader;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
-import mvc.controller.VerschluesselungController;
 
 public class VerschluesselungsView extends view {
 	
