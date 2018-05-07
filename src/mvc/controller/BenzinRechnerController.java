@@ -9,7 +9,6 @@ import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import mvc.model.BenzinRechner;
 import mvc.view.BenzinRechnerView;
-import mvc.view.view;
 
 
 public class BenzinRechnerController {
@@ -40,23 +39,33 @@ public class BenzinRechnerController {
 	private BenzinRechnerView BenzinRechnerView = new BenzinRechnerView("benzinrechner.fxml", "Benzinrechner");
 
 	
+	// Werte von input Feldern in Variabeln schreiben
+	public void getValues(){
+		BenzinRechnerModel.tankGesamt = Double.parseDouble(input_tankTotal.getText());
+		BenzinRechnerModel.verbrauchPro100 = Double.parseDouble(input_verbrauch.getText());
+		BenzinRechnerModel.kmGeplant = Double.parseDouble(input_kmGeplant.getText());
+		BenzinRechnerModel.kmGefahren = Double.parseDouble(input_kmSeitTanken.getText());
+	}
+	
+	
 	@FXML
 	public void handleButtonClick(ActionEvent event) throws IOException {
+		getValues();
 		switch (((Node) event.getSource()).getId()) {
 		case "btn_kmMitTankVoll":
-			this.BenzinRechnerView.kmMitTankVoll();
+			this.BenzinRechnerModel.kmMitTankVoll();
 			break;
 		case "btn_kmMitLiterAktuell":
-			this.BenzinRechnerView.kmMitLiterAktuell();
+			this.BenzinRechnerModel.kmMitLiterAktuell();
 			break;
 		case "btn_literAktuell":
-			this.BenzinRechnerView.literAktuell();
+			this.BenzinRechnerModel.literAktuell();
 			break;
 		case "btn_literTankenFuerGeplant":
-			this.BenzinRechnerView.literTankenFuerGeplant();
+			this.BenzinRechnerModel.literTankenFuerGeplant();
 			break;
 		case "btn_anzTankenKmGeplant":
-			this.BenzinRechnerView.anzTankenKmGeplant();
+			this.BenzinRechnerModel.anzTankenKmGeplant();
 			break;
 		default:
 			break;
