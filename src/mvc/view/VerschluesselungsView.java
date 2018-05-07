@@ -18,8 +18,7 @@ try {
 			Parent root = FXMLLoader.load(getClass().getResource("textverschlüsselung.fxml"));
 			Scene scene = new Scene(root);
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
-			codeStage.setScene(scene);
-			codeStage.show();
+
 			
 			TextArea textInput = (TextArea) root.lookup("#textInput");
 			TextArea textOutput = (TextArea) root.lookup("#textOutput");
