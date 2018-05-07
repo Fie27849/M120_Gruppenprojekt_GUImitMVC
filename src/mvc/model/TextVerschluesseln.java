@@ -1,7 +1,7 @@
 package mvc.model;
 
 
-public class TextVerschluesseln implements StdFilesLoc{
+public class TextVerschluesseln{
 	
 	private String text = "";
 	private String verschluesselterText = "";
@@ -64,49 +64,4 @@ public class TextVerschluesseln implements StdFilesLoc{
 		}
 		return decodierterText;
 	}
-	
-	/**
-	 * Methode test
-	 */
-//	private void test(){
-//		if(testMethod == 0){
-//			if(decodierterText.equals(text)){
-//				System.out.println("\nVer- und entschlüsselung mit File erfolgreich!\n");
-//				testergebnis++;
-//			}else{
-//				System.out.println("\nVer- und entschlüsselung mit File fehlerhaft!\n");
-//			}
-//		}else{
-//			if(decodierterText.equals(text)){
-//				System.out.println("\nVer- und entschlüsselung mit Eingabe erfolgreich!\n");
-//				testergebnis++;
-//				if(testergebnis == 2){
-//					System.out.println("\nDer Test konnte erfolgreich abgeschlossen werden!");
-//				}
-//				else{
-//					System.out.println("\nBitte Fehler überprüfen!");
-//				}
-//			}else{
-//				System.out.println("Ver- und entschlüsselung mit Eingabe fehlerhaft!");
-//				System.out.println("\nBitte Fehler überprüfen!");
-//			}
-//		}
-//	}
-
-
-	/**
-	 * Methoden welche vom Interface StdFilesLoc uebernommen werden.
-	 */
-	@Override
-	public boolean check_folder() {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	@Override
-	public boolean create_folder() {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
 }
