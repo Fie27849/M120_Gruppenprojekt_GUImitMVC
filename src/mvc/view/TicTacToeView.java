@@ -1,13 +1,11 @@
 package mvc.view;
 
-public class TicTacToeView {
+public class TicTacToeView extends view {
 
-	public TicTacToeView() {
-
-	}
-
-	public TicTacToeView(String string, String string2) {
+	public TicTacToeView(String linktofxml, String Title) {
+		super(linktofxml, Title);
 		// TODO Auto-generated constructor stub
 	}
 
+	
 }

@@ -1,5 +1,7 @@
 package mvc.controller;
 
+import java.io.IOException;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
@@ -39,7 +41,7 @@ public class TicTacToeController extends MainController {
 	
 	
 	@FXML
-	public void handleMenuClick() {
-		
+	public void handleMenuClick(ActionEvent event) throws IOException {
+		super.handleMenuClick(event);
 	}
 }

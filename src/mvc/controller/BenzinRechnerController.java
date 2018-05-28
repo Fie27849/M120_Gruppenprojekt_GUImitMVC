@@ -11,7 +11,7 @@ import mvc.model.BenzinRechner;
 import mvc.view.BenzinRechnerView;
 
 
-public class BenzinRechnerController {
+public class BenzinRechnerController extends MainController {
 
 	@FXML
 	private Button btn_kmMitTankVoll;
@@ -48,8 +48,8 @@ public class BenzinRechnerController {
 	}
 	
 	@FXML
-	public void handleMenuClick() {
-		
+	public void handleMenuClick(ActionEvent event) throws IOException {
+		super.handleMenuClick(event);
 	}
 	
 	@FXML

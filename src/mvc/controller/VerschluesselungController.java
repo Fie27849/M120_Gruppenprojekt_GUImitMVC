@@ -9,7 +9,7 @@ import javafx.scene.control.TextArea;
 import mvc.model.TextVerschluesseln;
 import mvc.view.VerschluesselungsView;
 
-public class VerschluesselungController {
+public class VerschluesselungController extends MainController {
 	
 	@FXML
 	private Button codieren;
@@ -46,5 +46,9 @@ public class VerschluesselungController {
 		default:
 			break;
 		}
+	}
+	@FXML
+	public void handleMenuClick(ActionEvent event) throws IOException {
+		super.handleMenuClick(event);
 	}
 }

@@ -23,6 +23,7 @@ import mvc.view.BenzinRechnerView;
 import mvc.view.TicTacToeView;
 import mvc.view.VerschluesselungsView;
 import mvc.view.dreiDPunkteView;
+import mvc.view.home;
 
 public class MainController {
 	
@@ -39,7 +40,7 @@ public class MainController {
 	@FXML
 	private MenuItem benzinrechner;
 
-	private model mymodel = new model("Home");
+	private home homeview;
 	private BenzinRechnerView BenzinRechnerView;
 	private TicTacToeView TicTacToeView;
 	private dreiDPunkteView dreiDPunkteView;
@@ -55,9 +56,12 @@ public class MainController {
 			this.dreiDPunkteView.changeScene(stage);
 			break;
 		case "home":
+			this.homeview = new home("../view/home.fxml", "Home");
+			this.homeview.changeScene(stage);
 			break;
 		case "tictactoe":
 			this.TicTacToeView = new TicTacToeView("../view/tictactoe.fxml", "Tic Tac Toe");
+			this.TicTacToeView.changeScene(stage);
 			break;
 		case "textverschluesselung":
 			this.verschluesselungsView = new VerschluesselungsView("../view/textverschluesselung.fxml", "Text Verschlüsseln");
