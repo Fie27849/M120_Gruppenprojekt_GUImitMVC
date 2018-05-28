@@ -14,14 +14,12 @@ public class TicTacToe {
 	private String player1 = "o";
 	private String player2 = "x";
 	private boolean turn;
-	private Scanner scan;
 	private boolean gameon;
 	
 	/**
 	 * Konstruktor welcher aufgerufen wird um das Spiel aufzusetzen
 	 * */
 	public TicTacToe() {
-		this.scan = new Scanner(System.in);
 		this.turn = true;
 		this.gameon = true;
 		initGame();	
@@ -37,27 +35,14 @@ public class TicTacToe {
 		}
 		
 	}
-	/**
-	 * Um das Spiel zu starten diese Methode aufrufen.
-	 * Diese Methode laeuft solange bis es einen Sieger hat
-	 * */
-	public void start() {
-		do {
-			user_input();
-		} while (gameon);
-		System.out.println("The game is over");
-	}
+	
 	/**
 	 * Methode fragt nach User Input (Entweder Player 1 oder Player 2).
 	 * Falls die Methode setfield ein False zurueck gibt, wird ausgegeben
 	 * das ein ungueltiger Spielzug stattgefunden hat & der Spieler kann aber immernoch
 	 * setzen.
 	 * */
-	private void user_input() {
-		System.out.println(turn ? "Player 1" : "Player 2");
-		System.out.println("Give in Row - (1-3) and Column | (1-3)");
-		int row = this.scan.nextInt();
-		int column = this.scan.nextInt();
+	public void user_input(int row, int column) {
 		if(setfield(row, column)) {
 			draw_field();
 			check_win();
