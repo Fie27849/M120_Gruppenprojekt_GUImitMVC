@@ -47,6 +47,10 @@ public class BenzinRechnerController {
 		BenzinRechnerModel.kmGefahren = Double.parseDouble(input_kmSeitTanken.getText());
 	}
 	
+	@FXML
+	public void handleMenuClick() {
+		
+	}
 	
 	@FXML
 	public void handleButtonClick(ActionEvent event) throws IOException {

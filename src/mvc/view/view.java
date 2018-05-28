@@ -20,10 +20,25 @@ public class view
 		this.Title = Title;
 	}
 
-	public void changeScene(ActionEvent event) throws IOException {
+	public String getLinktofxml() {
+		return linktofxml;
+	}
+
+	public String getTitle() {
+		return Title;
+	}
+
+	public void setLinktofxml(String linktofxml) {
+		this.linktofxml = linktofxml;
+	}
+
+	public void setTitle(String title) {
+		Title = title;
+	}
+
+	public void changeScene(Stage window) throws IOException {
 		Parent MyView = FXMLLoader.load(main.class.getResource(this.linktofxml));
 		Scene MyScene = new Scene(MyView);
-		Stage window = (Stage) (((Node) event.getSource()).getScene().getWindow());
 		window.setScene(MyScene);
 		window.setTitle(this.Title);
 		window.show();

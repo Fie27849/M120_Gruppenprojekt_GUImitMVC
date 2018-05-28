@@ -43,4 +43,8 @@ public class VerschluesselungController {
 			break;
 		}
 	}
+	@FXML
+	public void handleMenuClick() {
+		
+	}
 }

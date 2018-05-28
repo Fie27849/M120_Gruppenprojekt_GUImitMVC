@@ -53,6 +53,10 @@ public class DreiDPunkteController
 			break;
 		}
 	}
+	@FXML
+	public void handleMenuClick() {
+		
+	}
 	
 	public double berechnen(TextField ax, TextField ay, TextField az, TextField bx, TextField by, TextField bz, TextField cx, TextField cy, TextField cz, Label ausgabe) 
 	{

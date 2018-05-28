@@ -5,12 +5,18 @@ import java.io.IOException;
 import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Menu;
+import javafx.scene.control.MenuButton;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 import mvc.model.TextVerschluesseln;
+import mvc.template.main;
 import mvc.template.model;
 import mvc.template.view;
 import mvc.view.BenzinRechnerView;
@@ -20,6 +26,8 @@ import mvc.view.dreiDPunkteView;
 
 public class MainController {
 	
+	@FXML
+	private MenuButton myMenuButton;
 	@FXML
 	private MenuItem punkte3d;
 	@FXML
@@ -40,10 +48,11 @@ public class MainController {
 	@FXML
 	public void handleMenuClick(ActionEvent event) throws IOException {
 		MenuItem MenuItem = ((MenuItem) event.getSource());
+		Stage stage = (Stage) myMenuButton.getScene().getWindow();
 		switch (MenuItem.getId()) {
 		case "punkte3d":
 			this.dreiDPunkteView = new dreiDPunkteView("../view/3dpunkte.fxml", "3D Punkte");
-			this.dreiDPunkteView.changeScene(event);
+			this.dreiDPunkteView.changeScene(stage);
 			break;
 		case "home":
 			break;
@@ -52,11 +61,11 @@ public class MainController {
 			break;
 		case "textverschluesselung":
 			this.verschluesselungsView = new VerschluesselungsView("../view/textverschluesselung.fxml", "Text Verschlüsseln");
-			this.verschluesselungsView.changeScene(event);
+			this.verschluesselungsView.changeScene(stage);
 			break;
 		case "benzinrechner":
 			this.BenzinRechnerView = new BenzinRechnerView("../view/benzinrechner.fxml", "Benzin Rechner");
-			this.BenzinRechnerView.changeScene(event);
+			this.BenzinRechnerView.changeScene(stage);
 			break;
 		default:
 			break;
