@@ -64,11 +64,11 @@ public class MainController {
 			this.TicTacToeView.changeScene(stage);
 			break;
 		case "textverschluesselung":
-<<<<<<< HEAD
-			this.verschluesselungsView = new VerschluesselungsView("../view/textverschluesselung.fxml", "Text Verschlüsseln");
-=======
+
+			
+
 //			this.verschluesselungsView = new VerschluesselungsView("../view/textverschluesselung.fxml", "Text Verschlï¿½sseln");
->>>>>>> c7c2185ae5db991b7a2d799c6b31cc8f0336f8a4
+
 			this.verschluesselungsView.changeScene(stage);
 			break;
 		case "benzinrechner":
