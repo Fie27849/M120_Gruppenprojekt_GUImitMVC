@@ -46,11 +46,11 @@
          </font>
       </Label>
       <TextArea id="textInput" fx:id="textInput" layoutX="35.0" layoutY="100.0" prefHeight="78.0" prefWidth="251.0" promptText="Eingabe Text verschlüsslen" />
-      <Button id="codieren" fx:id="codieren" layoutX="35.0" layoutY="315.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="134.0" text="Vereschlüsseln" />
+      <Button id="codieren" fx:id="codieren" onAction="#handleButtonClick" layoutX="35.0" layoutY="315.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="134.0" text="Vereschlüsseln" />
       <TextArea id="outputCode" fx:id="outputCode" layoutX="316.0" layoutY="100.0" prefHeight="78.0" prefWidth="251.0" promptText="Ausgabe verschlüsselter Text" />
       <TextArea id="outputDecode" fx:id="outputDecode" layoutX="316.0" layoutY="214.0" prefHeight="78.0" prefWidth="251.0" promptText="Ausgabe decodierter Text" />
       <TextArea id="textDecodeInput" fx:id="textDecodeInput" layoutX="35.0" layoutY="214.0" prefHeight="78.0" prefWidth="251.0" promptText="Eingabe Text decodieren" />
-      <Button id="decodieren" fx:id="decodieren" layoutX="35.0" layoutY="350.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="134.0" text="Decodieren" />
+      <Button id="decodieren" fx:id="decodieren" onAction="#handleButtonClick" layoutX="35.0" layoutY="350.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="134.0" text="Decodieren" />
       <TextArea id="codeword" fx:id="codeword" layoutX="408.0" layoutY="321.0" prefHeight="27.0" prefWidth="158.0" promptText="Code Wort" />
    </children>
 </AnchorPane>
