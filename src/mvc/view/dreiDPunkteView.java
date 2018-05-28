@@ -11,6 +11,7 @@ public class dreiDPunkteView extends view
 
 	public void setflaeche(Double flaeche, Double gamma, Double a, Double b, Double c, TextField output, TextField gammaout, TextField aout, TextField bout, TextField cout)
 	{
+		gamma = gamma * 180 / Math.PI;
 		output.setText(flaeche.toString());
 		gammaout.setText(gamma.toString());
 		aout.setText(a.toString());
