@@ -21,7 +21,7 @@
       <TextArea id="outputDecode" fx:id="outputDecode" layoutX="316.0" layoutY="214.0" prefHeight="78.0" prefWidth="251.0" promptText="Ausgabe decodierter Text" />
       <TextArea id="textDecodeInput" fx:id="textDecodeInput" layoutX="35.0" layoutY="214.0" prefHeight="78.0" prefWidth="251.0" promptText="Eingabe Text decodieren" />
       <Button id="decodieren" fx:id="decodieren" layoutX="35.0" layoutY="350.0" mnemonicParsing="false" onAction="#handleButtonClick" prefHeight="27.0" prefWidth="134.0" text="Decodieren" />
-      <TextArea id="codeword" fx:id="codeword" layoutX="408.0" layoutY="321.0" prefHeight="27.0" prefWidth="158.0" promptText="Code Wort" />
+      <TextArea id="codeword" fx:id="codeword" layoutX="315.0" layoutY="315.0" prefHeight="62.0" prefWidth="251.0" promptText="Code Wort" />
       <MenuButton fx:id="myMenuButton" layoutX="35.0" layoutY="39.0" mnemonicParsing="false" text="Textverschlüsselung">
         <items>
             <MenuItem fx:id="home" mnemonicParsing="false" onAction="#handleMenuClick" text="Home" />
@@ -31,6 +31,6 @@
             <MenuItem fx:id="benzinrechner" mnemonicParsing="false" onAction="#handleMenuClick" text="Benzinrechner" />
          </items>
       </MenuButton>
-      <Button id="clear" layoutX="183.0" layoutY="350.0" mnemonicParsing="false" onAction="#handleButtonClick" text="Löschen" />
+      <Button id="clear" layoutX="216.0" layoutY="350.0" mnemonicParsing="false" onAction="#handleButtonClick" text="Löschen" />
    </children>
 </AnchorPane>
