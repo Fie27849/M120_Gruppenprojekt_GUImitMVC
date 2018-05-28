@@ -36,7 +36,7 @@ public class BenzinRechnerController extends MainController {
 	
 
 	private BenzinRechner BenzinRechnerModel = new BenzinRechner("Benzinrechner");
-	private BenzinRechnerView BenzinRechnerView = new BenzinRechnerView("benzinrechner.fxml", "Benzinrechner");
+	//private BenzinRechnerView BenzinRechnerView = new BenzinRechnerView("benzinrechner.fxml", "Benzinrechner");
 
 	
 	// Werte von input Feldern in Variabeln schreiben
