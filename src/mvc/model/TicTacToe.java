@@ -59,10 +59,9 @@ public class TicTacToe {
 	 * gibt die Methode ein false
 	 * */
 	private boolean setfield(int column, int row) {
-		if(row > 3 || column > 3)
+		if(row > 2 || column > 2)
 			return false;
-		--row;
-		--column;
+
 		if(this.getField()[row][column] == " "){
 			if(turn) {
 				this.getField()[row][column] = player1;

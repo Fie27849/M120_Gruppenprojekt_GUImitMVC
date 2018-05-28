@@ -24,9 +24,6 @@ public class TicTacToeView extends view {
 		setButtonText(c2, field[2][1]);
 		setButtonText(c3, field[2][2]);
 
-		System.out.println();
-		System.out.print("- - - - - -");
-		System.out.println();
 	}
 
 	public void setButtonText(Button btn, String text) {
