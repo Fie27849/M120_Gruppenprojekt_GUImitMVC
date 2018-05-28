@@ -9,9 +9,13 @@ public class dreiDPunkteView extends view
 		super(linktofxml, Title);
 	}
 
-	public void setflaeche(Double flaeche, TextField output)
+	public void setflaeche(Double flaeche, Double gamma, Double a, Double b, Double c, TextField output, TextField gammaout, TextField aout, TextField bout, TextField cout)
 	{
 		output.setText(flaeche.toString());
+		gammaout.setText(gamma.toString());
+		aout.setText(a.toString());
+		bout.setText(b.toString());
+		cout.setText(c.toString());
 	}
 	
 }

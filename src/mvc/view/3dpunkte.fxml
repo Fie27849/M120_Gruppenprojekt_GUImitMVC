@@ -44,6 +44,14 @@
          </items>
       </MenuButton>
       <TextField id="ax" fx:id="output" layoutX="338.0" layoutY="140.0" prefHeight="27.0" prefWidth="100.0" promptText="0.00" />
-      <Text layoutX="274.0" layoutY="158.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Resultat" />
+      <Text layoutX="274.0" layoutY="158.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fläche:" />
+      <TextField id="ax" fx:id="gammaout" layoutX="338.0" layoutY="171.0" prefHeight="27.0" prefWidth="100.0" promptText="0.00" />
+      <TextField id="ax" fx:id="aout" layoutX="338.0" layoutY="203.0" prefHeight="27.0" prefWidth="100.0" promptText="0.00" />
+      <Text layoutX="274.0" layoutY="189.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gamma:" />
+      <Text layoutX="277.0" layoutY="221.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A:" />
+      <TextField id="ax" fx:id="bout" layoutX="338.0" layoutY="236.0" prefHeight="27.0" prefWidth="100.0" promptText="0.00" />
+      <Text layoutX="277.0" layoutY="254.0" strokeType="OUTSIDE" strokeWidth="0.0" text="B:" />
+      <TextField id="ax" fx:id="cout" layoutX="338.0" layoutY="272.0" prefHeight="27.0" prefWidth="100.0" promptText="0.00" />
+      <Text layoutX="277.0" layoutY="290.0" strokeType="OUTSIDE" strokeWidth="0.0" text="C:" />
    </children>
 </AnchorPane>

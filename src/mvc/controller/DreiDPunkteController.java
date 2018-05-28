@@ -37,6 +37,13 @@ public class DreiDPunkteController extends MainController
 	private TextField cz;
 	@FXML
 	private TextField output;
+	@FXML
+	private TextField gammaout;
+	@FXML
+	private TextField aout;
+	@FXML
+	private TextField bout;
+	@FXML TextField cout;
 
 	private dreieck3d dreiDPunkteModel = new dreieck3d();
 	private dreiDPunkteView myView = new dreiDPunkteView("3dpunkte.fxml", "3D Punkte");
@@ -45,9 +52,9 @@ public class DreiDPunkteController extends MainController
 	public void handleButtonClick(ActionEvent event) throws IOException {
 		switch (((Node) event.getSource()).getId()) {
 		case "btnberechnen":
-			
-			double flaeche = berechnen(ax, ay, az, bx, by, bz, cx, cy, cz, output);
-			myView.setflaeche(flaeche, output);
+			Double[] ret = new Double[5];
+			ret = berechnen(ax, ay, az, bx, by, bz, cx, cy, cz, output);
+			myView.setflaeche(ret[0],ret[1],ret[2],ret[3],ret[4], output, gammaout, aout,bout,cout);
 			break;
 		
 		default:
@@ -59,7 +66,7 @@ public class DreiDPunkteController extends MainController
 		super.handleMenuClick(event);
 	}
 	
-	public double berechnen(TextField ax, TextField ay, TextField az, TextField bx, TextField by, TextField bz, TextField cx, TextField cy, TextField cz, TextField ausgabe) 
+	public Double[] berechnen(TextField ax, TextField ay, TextField az, TextField bx, TextField by, TextField bz, TextField cx, TextField cy, TextField cz, TextField ausgabe) 
 	{
 		int xa = Integer.parseInt(ax.getText());
 		int xb = Integer.parseInt(bx.getText());
@@ -76,7 +83,13 @@ public class DreiDPunkteController extends MainController
 		double[] seiten = dreiDPunkteModel.seitenberechnen(xa,xb,xc,ya,yb,yc,za,zb,zc);
 		double gamma = dreiDPunkteModel.gammabestimmen(seiten[0],seiten[1],seiten[2]);
 		double flaeche = dreiDPunkteModel.flaechebestimmen(seiten[0],seiten[1], gamma);
-		return flaeche;
+		Double[] ret = new Double[5];
+		ret[0] = flaeche;
+		ret[1] = gamma;
+		ret[2] = seiten[0];
+		ret[3] = seiten[1];
+		ret[4] = seiten[2];
+		return ret;
 	}
 	
 }
