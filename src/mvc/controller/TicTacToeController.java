@@ -10,9 +10,9 @@ import javafx.scene.control.Label;
 import mvc.model.TicTacToe;
 
 public class TicTacToeController extends MainController {
-	
+
 	private TicTacToe game;
-	
+
 	@FXML
 	private Button a1;
 	@FXML
@@ -33,13 +33,33 @@ public class TicTacToeController extends MainController {
 	private Button c3;
 	@FXML
 	private Label info;
-	
+
 	@FXML
 	public void handleButtonClick(ActionEvent event) {
-		System.out.println(((Node) event.getSource()).getId());
+		switch (((Node) event.getSource()).getId()) {
+		case "a1":
+			break;
+		case "a2":
+			break;
+		case "a3":
+			break;
+		case "b1":
+			break;
+		case "b2":
+			break;
+		case "b3":
+			break;
+		case "c1":
+			break;
+		case "c2":
+			break;
+		case "c3":
+			break;
+		default:
+			break;
+		}
 	}
-	
-	
+
 	@FXML
 	public void handleMenuClick(ActionEvent event) throws IOException {
 		super.handleMenuClick(event);
