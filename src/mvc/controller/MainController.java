@@ -21,7 +21,6 @@ import mvc.template.model;
 import mvc.template.view;
 import mvc.view.BenzinRechnerView;
 import mvc.view.TicTacToeView;
-import mvc.view.home;
 import mvc.view.VerschluesselungsView;
 import mvc.view.dreiDPunkteView;
 
@@ -45,7 +44,6 @@ public class MainController {
 	private TicTacToeView TicTacToeView;
 	private dreiDPunkteView dreiDPunkteView;
 	private VerschluesselungsView verschluesselungsView;
-	private home homeview;
 	
 	@FXML
 	public void handleMenuClick(ActionEvent event) throws IOException {
@@ -57,14 +55,12 @@ public class MainController {
 			this.dreiDPunkteView.changeScene(stage);
 			break;
 		case "home":
-			this.homeview = new home("../view/home.fxml", "Home");
-			this.homeview.changeScene(stage);
 			break;
 		case "tictactoe":
 			this.TicTacToeView = new TicTacToeView("../view/tictactoe.fxml", "Tic Tac Toe");
 			break;
 		case "textverschluesselung":
-			this.verschluesselungsView = new VerschluesselungsView("../view/textverschluesselung.fxml", "Text Verschlï¿½sseln");
+			this.verschluesselungsView = new VerschluesselungsView("../view/textverschluesselung.fxml", "Text Verschlüsseln");
 			this.verschluesselungsView.changeScene(stage);
 			break;
 		case "benzinrechner":
