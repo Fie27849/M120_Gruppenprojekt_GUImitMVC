@@ -14,7 +14,11 @@ public class dreieck3d
 	 */
 	public double gammabestimmen(double a, double b, double c)
 	{
-		double gamma = Math.acos((c * c - a * a - b * b) / (-2 * a * b));
+		double tempoben =  Math.pow(c,2) -  Math.pow( a,2 ) -  Math.pow( b,2 );
+		double tempunten = -2 * a * b;
+		
+		double cosgamma = tempoben/tempunten;
+		double gamma = Math.acos(cosgamma);
 		return gamma;
 	}
 	/**
@@ -36,9 +40,8 @@ public class dreieck3d
 	 * Berechnet anhand der Seiten a und b und dem Sinus des Winkels Gamma die Fläche des Dreiecks ABC
 	 * @return Fläche
 	 */
-	public double flaechebestimmen(double a, double b,double gamma)
+	public double flaechebestimmen(double gamma, double a, double b)
 	{
-		
 		 double flaeche = 0.5 * a * b * Math.sin(gamma);
 		 return flaeche;
 	}
