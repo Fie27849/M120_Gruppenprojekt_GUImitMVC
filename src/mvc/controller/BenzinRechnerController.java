@@ -53,19 +53,19 @@ public class BenzinRechnerController {
 		getValues();
 		switch (((Node) event.getSource()).getId()) {
 		case "btn_kmMitTankVoll":
-			this.BenzinRechnerModel.kmMitTankVoll();
+			BenzinRechnerView.ausgabe(this.BenzinRechnerModel.kmMitTankVoll());
 			break;
 		case "btn_kmMitLiterAktuell":
-			this.BenzinRechnerModel.kmMitLiterAktuell();
+			BenzinRechnerView.ausgabe(this.BenzinRechnerModel.kmMitLiterAktuell());
 			break;
 		case "btn_literAktuell":
-			this.BenzinRechnerModel.literAktuell();
+			BenzinRechnerView.ausgabe(this.BenzinRechnerModel.literAktuell());
 			break;
 		case "btn_literTankenFuerGeplant":
-			this.BenzinRechnerModel.literTankenFuerGeplant();
+			BenzinRechnerView.ausgabe(this.BenzinRechnerModel.literTankenFuerGeplant());
 			break;
 		case "btn_anzTankenKmGeplant":
-			this.BenzinRechnerModel.anzTankenKmGeplant();
+			BenzinRechnerView.ausgabe(this.BenzinRechnerModel.anzTankenKmGeplant());
 			break;
 		default:
 			break;
