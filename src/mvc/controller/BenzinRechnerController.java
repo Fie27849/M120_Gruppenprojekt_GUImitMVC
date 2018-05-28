@@ -38,8 +38,6 @@ public class BenzinRechnerController extends MainController {
 
 	private BenzinRechner BenzinRechnerModel = new BenzinRechner();
 	private BenzinRechnerView BenzinRechnerView = new BenzinRechnerView("benzinrechner.fxml", "Benzinrechner");
-	private BenzinRechner BenzinRechnerModel = new BenzinRechner("Benzinrechner");
-	//private BenzinRechnerView BenzinRechnerView = new BenzinRechnerView("benzinrechner.fxml", "Benzinrechner");
 
 
 	
