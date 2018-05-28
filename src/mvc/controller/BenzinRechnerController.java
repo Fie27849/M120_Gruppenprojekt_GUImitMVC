@@ -35,8 +35,12 @@ public class BenzinRechnerController extends MainController {
 	private TextArea output_result;
 	
 
-	private BenzinRechner BenzinRechnerModel = new BenzinRechner("Benzinrechner");
+
+	private BenzinRechner BenzinRechnerModel = new BenzinRechner();
 	private BenzinRechnerView BenzinRechnerView = new BenzinRechnerView("benzinrechner.fxml", "Benzinrechner");
+	private BenzinRechner BenzinRechnerModel = new BenzinRechner("Benzinrechner");
+	//private BenzinRechnerView BenzinRechnerView = new BenzinRechnerView("benzinrechner.fxml", "Benzinrechner");
+
 
 	
 	// Werte von input Feldern in Variabeln schreiben
@@ -57,19 +61,20 @@ public class BenzinRechnerController extends MainController {
 		getValues();
 		switch (((Node) event.getSource()).getId()) {
 		case "btn_kmMitTankVoll":
-			BenzinRechnerView.ausgabe(this.BenzinRechnerModel.kmMitTankVoll());
+			BenzinRechnerModel.kmRest = BenzinRechnerModel.kmMitTankVoll();
+			BenzinRechnerView.ausgabe(BenzinRechnerModel.kmRest, output_result);
 			break;
 		case "btn_kmMitLiterAktuell":
-			BenzinRechnerView.ausgabe(this.BenzinRechnerModel.kmMitLiterAktuell());
+			BenzinRechnerModel.kmRest = BenzinRechnerModel.kmMitLiterAktuell();
 			break;
 		case "btn_literAktuell":
-			BenzinRechnerView.ausgabe(this.BenzinRechnerModel.literAktuell());
+			BenzinRechnerModel.kmRest = BenzinRechnerModel.literAktuell();
 			break;
 		case "btn_literTankenFuerGeplant":
-			BenzinRechnerView.ausgabe(this.BenzinRechnerModel.literTankenFuerGeplant());
+			BenzinRechnerModel.verbrauchKmRestGeplant = BenzinRechnerModel.literTankenFuerGeplant();
 			break;
 		case "btn_anzTankenKmGeplant":
-			BenzinRechnerView.ausgabe(this.BenzinRechnerModel.anzTankenKmGeplant());
+			BenzinRechnerModel.anzNachtanken = BenzinRechnerModel.anzTankenKmGeplant();
 			break;
 		default:
 			break;
