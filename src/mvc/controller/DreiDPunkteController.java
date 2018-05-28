@@ -13,7 +13,7 @@ import mvc.template.model;
 import mvc.template.view;
 import mvc.view.dreiDPunkteView;
 
-public class DreiDPunkteController 
+public class DreiDPunkteController extends MainController
 {
 	@FXML
 	private Button btnberechnen;
@@ -55,8 +55,8 @@ public class DreiDPunkteController
 		}
 	}
 	@FXML
-	public void handleMenuClick() {
-		
+	public void handleMenuClick(ActionEvent event) throws IOException {
+		super.handleMenuClick(event);
 	}
 	
 	public double berechnen(TextField ax, TextField ay, TextField az, TextField bx, TextField by, TextField bz, TextField cx, TextField cy, TextField cz, TextField ausgabe) 

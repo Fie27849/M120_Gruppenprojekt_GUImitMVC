@@ -58,6 +58,7 @@ public class MainController {
 			break;
 		case "tictactoe":
 			this.TicTacToeView = new TicTacToeView("../view/tictactoe.fxml", "Tic Tac Toe");
+			this.TicTacToeView.changeScene(stage);
 			break;
 		case "textverschluesselung":
 			this.verschluesselungsView = new VerschluesselungsView("../view/textverschluesselung.fxml", "Text Verschlüsseln");
