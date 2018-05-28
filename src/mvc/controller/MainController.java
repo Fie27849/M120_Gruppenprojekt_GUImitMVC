@@ -42,7 +42,7 @@ public class MainController {
 
 	private home homeview;
 	private BenzinRechnerView BenzinRechnerView;
-	private TicTacToeView TicTacToeView;
+	protected TicTacToeView TicTacToeView;
 	private dreiDPunkteView dreiDPunkteView;
 	private VerschluesselungsView verschluesselungsView;
 	
