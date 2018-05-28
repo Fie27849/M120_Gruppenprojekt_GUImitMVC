@@ -33,7 +33,11 @@ public class VerschluesselungController extends MainController {
 	public void handleButtonClick(ActionEvent event) throws IOException {
 		switch (((Node) event.getSource()).getId()) {
 		case "codieren":
-			this.view.setCode(this.model.verschluesseln(textInput.getText(), codeword.getText()), outputCode);
+			if(codeword.getText().length() == 0){
+				this.view.setCode(this.model.verschluesseln(textInput.getText(), codeword.getText()), outputCode);
+			}else{
+				this.view.setCode(this.model.verschluesseln(textInput.getText(), "code"), outputCode);
+			}
 			break;
 		case "decodieren":
 			this.view.setDecode(this.model.decoder(textDecodeInput.getText(), codeword.getText()), outputDecode);
