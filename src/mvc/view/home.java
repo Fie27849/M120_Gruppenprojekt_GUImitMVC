@@ -9,24 +9,10 @@ import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
-public class home extends Application {
+public class home extends view {
 
-	private Stage primaryStage;
-	private AnchorPane rootLayout;
-	
-	@Override
-	public void start(Stage primaryStage) {
-		this.primaryStage = primaryStage;
-	       try {
-			Parent root = FXMLLoader.load(getClass().getResource("home.fxml"));
-			Scene scene = new Scene(root);
-			this.primaryStage.setScene(scene);
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		this.primaryStage.show();
-		
+	public home(String linktofxml, String Title) {
+		super(linktofxml, Title);
 	}
-		
+
 }
