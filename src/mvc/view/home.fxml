@@ -3,6 +3,8 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.MenuButton?>
 <?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
@@ -13,7 +15,7 @@
             <Font size="22.0" />
          </font>
       </Label>
-      <MenuButton layoutX="14.0" layoutY="14.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="133.0" text="Home" fx:id="myMenuButton">
+      <MenuButton fx:id="myMenuButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="133.0" text="Home">
         <items>
           <MenuItem fx:id="home" mnemonicParsing="false" onAction="#handleMenuClick" text="Home" />
             <MenuItem fx:id="tictactoe" mnemonicParsing="false" onAction="#handleMenuClick" text="Tic Tac Toe" />
@@ -22,5 +24,10 @@
             <MenuItem fx:id="benzinrechner" mnemonicParsing="false" onAction="#handleMenuClick" text="Benzinrechner" />
         </items>
       </MenuButton>
+      <ImageView fitHeight="286.0" fitWidth="540.0" layoutX="44.0" layoutY="70.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/code.gif" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>
