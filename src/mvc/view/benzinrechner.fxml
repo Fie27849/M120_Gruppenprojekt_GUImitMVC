@@ -36,7 +36,7 @@
       <TextArea fx:id="output_result" layoutX="44.0" layoutY="421.0" prefHeight="159.0" prefWidth="512.0" />
       <Line endX="470.0" layoutX="116.0" layoutY="218.0" startX="-100.0" />
       <Line endX="470.0" layoutX="116.0" layoutY="387.0" startX="-100.0" />
-      <MenuButton fx:id="myMenuButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="133.0" text="Benzinrechner">
+      <MenuButton layoutX="14.0" layoutY="14.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="133.0" text="Benzinrechner">
          <items>
             <MenuItem fx:id="home" mnemonicParsing="false" onAction="#handleMenuClick" text="Home" />
             <MenuItem fx:id="tictactoe" mnemonicParsing="false" onAction="#handleMenuClick" text="Tic Tac Toe" />
