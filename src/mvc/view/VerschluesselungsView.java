@@ -16,4 +16,12 @@ public class VerschluesselungsView extends view {
 		outputDecode.setText(decodeText);
 	}
 	
+	public void setClear(TextArea textInput, TextArea outputCode, TextArea outputDecode, TextArea textDecodeInput, TextArea codeword){
+		textInput.setText("");
+		outputCode.setText("");
+		outputDecode.setText("");
+		textDecodeInput.setText("");
+		codeword.setText("");
+	}
+	
 }
