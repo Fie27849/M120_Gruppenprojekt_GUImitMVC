@@ -28,9 +28,9 @@ public class TicTacToe {
 	 * Das Spielfeld wird mit lauter Leerzeichen aufgefuellt
 	 * */
 	private void initGame() {
-		for (int i = 0; i < field.length; i++) {
-			for (int j = 0; j < field.length; j++) {
-				this.field[i][j] = " ";
+		for (int i = 0; i < getField().length; i++) {
+			for (int j = 0; j < getField().length; j++) {
+				this.getField()[i][j] = " ";
 			}
 		}
 		
@@ -63,12 +63,12 @@ public class TicTacToe {
 			return false;
 		--row;
 		--column;
-		if(this.field[row][column] == " "){
+		if(this.getField()[row][column] == " "){
 			if(turn) {
-				this.field[row][column] = player1;
+				this.getField()[row][column] = player1;
 				this.turn = false;
 			} else {
-				this.field[row][column] = player2;
+				this.getField()[row][column] = player2;
 				this.turn = true;
 			}
 				
@@ -82,9 +82,9 @@ public class TicTacToe {
 	 * Das Spielfeld wird auf Konsolenlevel ausgegeben
 	 * */
 	private void draw_field(){
-		for (int i = 0; i < field.length; i++) {
-			for (int j = 0; j < field.length; j++) {
-				System.out.print(this.field[i][j]);
+		for (int i = 0; i < getField().length; i++) {
+			for (int j = 0; j < getField().length; j++) {
+				System.out.print(this.getField()[i][j]);
 				System.out.print(" | ");
 			}
 			System.out.println();
@@ -104,31 +104,31 @@ public class TicTacToe {
 		for (int i = 0; i < 9; i++) {
 			switch (i) {
 			case 0:
-				line = this.field[0][0] + this.field[1][0] + this.field[2][0];
+				line = this.getField()[0][0] + this.getField()[1][0] + this.getField()[2][0];
 				break;
 			case 1:
-				line = this.field[1][0] + this.field[1][1] + this.field[1][2];
+				line = this.getField()[1][0] + this.getField()[1][1] + this.getField()[1][2];
 				break;
 			case 2:
-				line = this.field[2][0] + this.field[2][1] + this.field[2][2];
+				line = this.getField()[2][0] + this.getField()[2][1] + this.getField()[2][2];
 				break;
 			case 3:
-				line = this.field[0][0] + this.field[0][1] + this.field[0][2];
+				line = this.getField()[0][0] + this.getField()[0][1] + this.getField()[0][2];
 				break;
 			case 4:
-				line = this.field[0][0] + this.field[1][0] + this.field[2][0];
+				line = this.getField()[0][0] + this.getField()[1][0] + this.getField()[2][0];
 				break;
 			case 5:
-				line = this.field[1][0] + this.field[1][1] + this.field[1][2];
+				line = this.getField()[1][0] + this.getField()[1][1] + this.getField()[1][2];
 				break;
 			case 6:
-				line = this.field[2][0] + this.field[2][1] + this.field[2][2];
+				line = this.getField()[2][0] + this.getField()[2][1] + this.getField()[2][2];
 				break;
 			case 7:
-				line = this.field[0][0] + this.field[1][1] + this.field[2][2];
+				line = this.getField()[0][0] + this.getField()[1][1] + this.getField()[2][2];
 				break;
 			case 8:
-				line = this.field[0][2] + this.field[1][1] + this.field[2][0];
+				line = this.getField()[0][2] + this.getField()[1][1] + this.getField()[2][0];
 				break;
 
 			default:
@@ -165,7 +165,7 @@ public class TicTacToe {
 		boolean gameover = true;
 		for (int i = 0; i < 3; i++) {
 			for (int j = 0; j < 3; j++) {
-				if(this.field[i][j].equals(" ")) {
+				if(this.getField()[i][j].equals(" ")) {
 					gameover = false;
 				}
 			}
@@ -186,11 +186,15 @@ public class TicTacToe {
 	 * Diese Methode fuellt das Spielfeld aus.
 	 * */
 	private void debug_field(){
-		this.field[2][0] = "x";
-		this.field[1][0] = "o";
-		this.field[0][2] = "x";
-		this.field[1][2] = "o";
-		this.field[1][1] = "x";
+		this.getField()[2][0] = "x";
+		this.getField()[1][0] = "o";
+		this.getField()[0][2] = "x";
+		this.getField()[1][2] = "o";
+		this.getField()[1][1] = "x";
 
 	}
+	public String[][] getField() {
+		return field;
+	}
+	
 }

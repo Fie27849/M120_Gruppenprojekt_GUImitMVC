@@ -11,8 +11,8 @@ import mvc.model.TicTacToe;
 
 public class TicTacToeController extends MainController {
 	
-	private TicTacToe game;
-	
+	private TicTacToe game = new TicTacToe();
+
 	@FXML
 	private Button a1;
 	@FXML
@@ -37,6 +37,8 @@ public class TicTacToeController extends MainController {
 	@FXML
 	public void handleButtonClick(ActionEvent event) {
 		System.out.println(((Node) event.getSource()).getId());
+		this.game.debug();
+		this.TicTacToeView.draw_field(a1, a2, a3, b1, b2, b3, c1, c2, c3, this.game.getField());
 	}
 	
 	

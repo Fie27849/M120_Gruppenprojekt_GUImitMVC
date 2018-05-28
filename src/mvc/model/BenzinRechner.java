@@ -2,6 +2,7 @@ package mvc.model;
 import java.util.Scanner;
 
 import mvc.controller.BenzinRechnerController;
+import mvc.view.BenzinRechnerView;
 
 
 public class BenzinRechner {
@@ -24,8 +25,7 @@ public class BenzinRechner {
 	public double tanken;				// hilft anzNachtanken
 	
 	// ---------------------------- Konstruktor -------------------------------------------------		
-	public BenzinRechner(String string) {
-		// TODO Auto-generated constructor stub
+	public BenzinRechner() {
 	}	
 	
 	
@@ -82,7 +82,7 @@ public class BenzinRechner {
 			return anzNachtanken;
 		}
 		
-		public double anzTankenKmGeplant(){
+		public int anzTankenKmGeplant(){
 			
 			kmRest = tankRest/verbrauchPro100*100;
 			kmRestGeplant = kmGeplant-kmRest;
