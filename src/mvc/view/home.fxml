@@ -15,12 +15,12 @@
             <Image url="@../../images/code.gif" />
          </image>
       </ImageView>
-      <Label layoutX="258.0" layoutY="14.0" text="Toolbox" textFill="WHITE">
+      <Label layoutX="234.0" layoutY="20.0" text="Toolbox" textFill="WHITE">
          <font>
-            <Font size="22.0" />
+            <Font size="35.0" />
          </font>
       </Label>
-      <MenuButton fx:id="myMenuButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="133.0" text="Home">
+      <MenuButton fx:id="myMenuButton" layoutX="14.0" layoutY="28.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="133.0" text="Home">
         <items>
           <MenuItem fx:id="home" mnemonicParsing="false" onAction="#handleMenuClick" text="Home" />
             <MenuItem fx:id="tictactoe" mnemonicParsing="false" onAction="#handleMenuClick" text="Tic Tac Toe" />
