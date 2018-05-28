@@ -40,11 +40,11 @@ public class MainController {
 	@FXML
 	private MenuItem benzinrechner;
 
-	private home homeview;
-	private BenzinRechnerView BenzinRechnerView;
-	protected TicTacToeView TicTacToeView;
-	private dreiDPunkteView dreiDPunkteView;
-	private VerschluesselungsView verschluesselungsView;
+	private home homeview = new home("../view/home.fxml", "Home");
+	private BenzinRechnerView BenzinRechnerView = new BenzinRechnerView("../view/benzinrechner.fxml", "Benzin Rechner");
+	protected TicTacToeView TicTacToeView = new TicTacToeView("../view/tictactoe.fxml", "Tic Tac Toe");
+	private dreiDPunkteView dreiDPunkteView = new dreiDPunkteView("../view/3dpunkte.fxml", "3D Punkte");
+	private VerschluesselungsView verschluesselungsView = new VerschluesselungsView("../view/textverschluesselung.fxml", "Textverschlüsselung");
 	
 	@FXML
 	public void handleMenuClick(ActionEvent event) throws IOException {
@@ -52,29 +52,22 @@ public class MainController {
 		Stage stage = (Stage) myMenuButton.getScene().getWindow();
 		switch (MenuItem.getId()) {
 		case "punkte3d":
-			this.dreiDPunkteView = new dreiDPunkteView("../view/3dpunkte.fxml", "3D Punkte");
+//			this.dreiDPunkteView = new dreiDPunkteView("../view/3dpunkte.fxml", "3D Punkte");
 			this.dreiDPunkteView.changeScene(stage);
 			break;
 		case "home":
-			this.homeview = new home("../view/home.fxml", "Home");
+//			this.homeview = new home("../view/home.fxml", "Home");
 			this.homeview.changeScene(stage);
 			break;
 		case "tictactoe":
-			this.TicTacToeView = new TicTacToeView("../view/tictactoe.fxml", "Tic Tac Toe");
+//			this.TicTacToeView = new TicTacToeView("../view/tictactoe.fxml", "Tic Tac Toe");
 			this.TicTacToeView.changeScene(stage);
 			break;
 		case "textverschluesselung":
-
-
-			
-
-//			this.verschluesselungsView = new VerschluesselungsView("../view/textverschluesselung.fxml", "Text Verschlï¿½sseln");
-
-
 			this.verschluesselungsView.changeScene(stage);
 			break;
 		case "benzinrechner":
-			this.BenzinRechnerView = new BenzinRechnerView("../view/benzinrechner.fxml", "Benzin Rechner");
+//			this.BenzinRechnerView = new BenzinRechnerView("../view/benzinrechner.fxml", "Benzin Rechner");
 			this.BenzinRechnerView.changeScene(stage);
 			break;
 		default:

@@ -32,11 +32,15 @@ public class TicTacToeController extends MainController {
 	@FXML
 	private Button c3;
 	@FXML
+	private Button newGame;
+	@FXML
 	private Label info;
+	@FXML
+	private Label currentPlayer;
+	
 	
 	@FXML
 	public void handleButtonClick(ActionEvent event) {
-		System.out.println(((Node) event.getSource()).getId());
 		int row = 3;
 		int column = 3;
 		switch (((Node) event.getSource()).getId()) {
@@ -76,12 +80,26 @@ public class TicTacToeController extends MainController {
 			row = 2;
 			column = 2;
 			break;
-
+		case "newGame":
+			this.game = new TicTacToe();
+			this.TicTacToeView.setLabelText(info, "");
+			//this.TicTacToeView.setLabelText(currentPlayer, "X");
 		default:
 			break;
 		}
-		System.out.println(row + " " + column);
-		this.game.user_input(row, column);
+		if(this.game.isGameon()) {
+			this.game.user_input(row, column);
+		} else {
+			this.TicTacToeView.setLabelText(info, "We have a Winner");
+		}
+		if(this.game.isTurn()) {
+			this.TicTacToeView.setLabelText(currentPlayer, "X");
+		} else {
+			this.TicTacToeView.setLabelText(currentPlayer, "O");
+		}
+		
+		
+		
 		this.TicTacToeView.draw_field(a1, a2, a3, b1, b2, b3, c1, c2, c3, this.game.getField());
 	}
 	

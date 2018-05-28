@@ -77,6 +77,19 @@ public class TicTacToe {
 		return false;
 	}
 	
+	public boolean isTurn() {
+		return turn;
+	}
+	public void switchTurn() {
+		if(this.turn) {
+			this.turn = false;
+		} else {
+			this.turn = true;
+		}
+	}
+	public boolean isGameon() {
+		return gameon;
+	}
 	/**
 	 * Das Spielfeld wird auf Konsolenlevel ausgegeben
 	 * */
