@@ -47,4 +47,5 @@ public class VerschluesselungController extends MainController {
 	public void handleMenuClick(ActionEvent event) throws IOException {
 		super.handleMenuClick(event);
 	}
+
 }
