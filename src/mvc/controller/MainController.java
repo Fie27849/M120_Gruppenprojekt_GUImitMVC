@@ -40,11 +40,11 @@ public class MainController {
 	@FXML
 	private MenuItem benzinrechner;
 
-	private home homeview;
-	private BenzinRechnerView BenzinRechnerView;
-	private TicTacToeView TicTacToeView;
-	private dreiDPunkteView dreiDPunkteView;
-	private VerschluesselungsView verschluesselungsView;
+	protected home homeview = new home("../view/home.fxml", "Home");
+	protected BenzinRechnerView BenzinRechnerView = new BenzinRechnerView("../view/benzinrechner.fxml", "Benzin Rechner");
+	protected TicTacToeView TicTacToeView = new TicTacToeView("../view/tictactoe.fxml", "Tic Tac Toe");
+	protected dreiDPunkteView dreiDPunkteView = new dreiDPunkteView("../view/3dpunkte.fxml", "3D Punkte");
+	protected VerschluesselungsView verschluesselungsView = new VerschluesselungsView("../view/textverschluesselung.fxml", "Text Verschl�sseln");
 	
 	@FXML
 	public void handleMenuClick(ActionEvent event) throws IOException {
@@ -52,23 +52,27 @@ public class MainController {
 		Stage stage = (Stage) myMenuButton.getScene().getWindow();
 		switch (MenuItem.getId()) {
 		case "punkte3d":
-			this.dreiDPunkteView = new dreiDPunkteView("../view/3dpunkte.fxml", "3D Punkte");
+//			this.dreiDPunkteView = new dreiDPunkteView("../view/3dpunkte.fxml", "3D Punkte");
 			this.dreiDPunkteView.changeScene(stage);
 			break;
 		case "home":
-			this.homeview = new home("../view/home.fxml", "Home");
+//			this.homeview = new home("../view/home.fxml", "Home");
 			this.homeview.changeScene(stage);
 			break;
 		case "tictactoe":
-			this.TicTacToeView = new TicTacToeView("../view/tictactoe.fxml", "Tic Tac Toe");
+//			this.TicTacToeView = new TicTacToeView("../view/tictactoe.fxml", "Tic Tac Toe");
 			this.TicTacToeView.changeScene(stage);
 			break;
 		case "textverschluesselung":
+<<<<<<< HEAD
 			this.verschluesselungsView = new VerschluesselungsView("../view/textverschluesselung.fxml", "Text Verschlüsseln");
+=======
+//			this.verschluesselungsView = new VerschluesselungsView("../view/textverschluesselung.fxml", "Text Verschlï¿½sseln");
+>>>>>>> c7c2185ae5db991b7a2d799c6b31cc8f0336f8a4
 			this.verschluesselungsView.changeScene(stage);
 			break;
 		case "benzinrechner":
-			this.BenzinRechnerView = new BenzinRechnerView("../view/benzinrechner.fxml", "Benzin Rechner");
+//			this.BenzinRechnerView = new BenzinRechnerView("../view/benzinrechner.fxml", "Benzin Rechner");
 			this.BenzinRechnerView.changeScene(stage);
 			break;
 		default:
