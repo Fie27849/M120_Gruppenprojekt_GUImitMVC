@@ -1,6 +1,7 @@
 package mvc.view;
 
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 
 public class dreiDPunkteView extends view
 {
@@ -8,7 +9,7 @@ public class dreiDPunkteView extends view
 		super(linktofxml, Title);
 	}
 
-	public void setflaeche(Double flaeche, Label output)
+	public void setflaeche(Double flaeche, TextField output)
 	{
 		output.setText(flaeche.toString());
 	}
