@@ -7,8 +7,6 @@ public class TextVerschluesseln{
 	private String verschluesselterText = "";
 	private String decodierterText = "";
 	private String pwd = "passwort";
-	private char[] charArray = {};
-	private char[] pwdArray = {};
 	int zpwd;
 	
 	
@@ -19,8 +17,12 @@ public class TextVerschluesseln{
 	
 	public String verschluesseln(String text, String pwd){
 		
+		verschluesselterText = "";
 		this.text = text;
 		this.pwd = pwd;
+		zpwd = 0;
+		char[] charArray = {};
+		char[] pwdArray = {};
 		
 		pwdArray = pwd.toCharArray();
 		charArray = text.toCharArray();
@@ -43,9 +45,12 @@ public class TextVerschluesseln{
 	
 	public String decoder(String text, String pwd){
 		
+		decodierterText = "";
 		this.text = text;
 		this.pwd = pwd;
 		zpwd = 0;
+		char[] charArray = {};
+		char[] pwdArray = {};
 		
 		pwdArray = pwd.toCharArray();
 		charArray = text.toCharArray();

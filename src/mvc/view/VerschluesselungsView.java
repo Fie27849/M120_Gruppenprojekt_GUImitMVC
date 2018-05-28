@@ -9,10 +9,12 @@ public class VerschluesselungsView extends view {
 	}
 
 	public void setCode(String codeText, TextArea outputCode){
+		outputCode.setText("");
 		outputCode.setText(codeText);
 	}
 	
 	public void setDecode(String decodeText,TextArea outputDecode){
+		outputDecode.setText("");
 		outputDecode.setText(decodeText);
 	}
 	
