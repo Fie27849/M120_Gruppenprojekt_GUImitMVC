@@ -36,7 +36,7 @@ public class DreiDPunkteController extends MainController
 	@FXML
 	private TextField cz;
 	@FXML
-	private Label output;
+	private TextField output;
 
 	private dreieck3d dreiDPunkteModel = new dreieck3d();
 	private dreiDPunkteView myView = new dreiDPunkteView("3dpunkte.fxml", "3D Punkte");
@@ -45,6 +45,7 @@ public class DreiDPunkteController extends MainController
 	public void handleButtonClick(ActionEvent event) throws IOException {
 		switch (((Node) event.getSource()).getId()) {
 		case "btnberechnen":
+			
 			double flaeche = berechnen(ax, ay, az, bx, by, bz, cx, cy, cz, output);
 			myView.setflaeche(flaeche, output);
 			break;
@@ -58,7 +59,7 @@ public class DreiDPunkteController extends MainController
 		super.handleMenuClick(event);
 	}
 	
-	public double berechnen(TextField ax, TextField ay, TextField az, TextField bx, TextField by, TextField bz, TextField cx, TextField cy, TextField cz, Label ausgabe) 
+	public double berechnen(TextField ax, TextField ay, TextField az, TextField bx, TextField by, TextField bz, TextField cx, TextField cy, TextField cz, TextField ausgabe) 
 	{
 		int xa = Integer.parseInt(ax.getText());
 		int xb = Integer.parseInt(bx.getText());
