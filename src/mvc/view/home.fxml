@@ -10,7 +10,12 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mvc.controller.MainController">
    <children>
-      <Label layoutX="258.0" layoutY="14.0" text="Toolbox">
+      <ImageView fitHeight="411.0" fitWidth="726.0" layoutX="-49.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/code.gif" />
+         </image>
+      </ImageView>
+      <Label layoutX="258.0" layoutY="14.0" text="Toolbox" textFill="WHITE">
          <font>
             <Font size="22.0" />
          </font>
@@ -24,10 +29,5 @@
             <MenuItem fx:id="benzinrechner" mnemonicParsing="false" onAction="#handleMenuClick" text="Benzinrechner" />
         </items>
       </MenuButton>
-      <ImageView fitHeight="286.0" fitWidth="540.0" layoutX="44.0" layoutY="70.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../images/code.gif" />
-         </image>
-      </ImageView>
    </children>
 </AnchorPane>
