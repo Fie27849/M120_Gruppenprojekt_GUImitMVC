@@ -59,20 +59,19 @@ public class BenzinRechnerController extends MainController {
 		getValues();
 		switch (((Node) event.getSource()).getId()) {
 		case "btn_kmMitTankVoll":
-			BenzinRechnerModel.kmRest = BenzinRechnerModel.kmMitTankVoll();
-			BenzinRechnerView.ausgabe(BenzinRechnerModel.kmRest, output_result);
+			BenzinRechnerView.ausgabe(BenzinRechnerModel.kmMitTankVoll(), output_result);
 			break;
 		case "btn_kmMitLiterAktuell":
-			BenzinRechnerModel.kmRest = BenzinRechnerModel.kmMitLiterAktuell();
+			BenzinRechnerView.ausgabe(BenzinRechnerModel.kmMitLiterAktuell(), output_result);
 			break;
 		case "btn_literAktuell":
-			BenzinRechnerModel.kmRest = BenzinRechnerModel.literAktuell();
+			BenzinRechnerView.ausgabe(BenzinRechnerModel.literAktuell(), output_result);
 			break;
 		case "btn_literTankenFuerGeplant":
-			BenzinRechnerModel.verbrauchKmRestGeplant = BenzinRechnerModel.literTankenFuerGeplant();
+			BenzinRechnerView.ausgabe(BenzinRechnerModel.literTankenFuerGeplant(), output_result);
 			break;
 		case "btn_anzTankenKmGeplant":
-			BenzinRechnerModel.anzNachtanken = BenzinRechnerModel.anzTankenKmGeplant();
+			BenzinRechnerView.ausgabe(BenzinRechnerModel.anzTankenKmGeplant(), output_result);
 			break;
 		default:
 			break;

@@ -21,12 +21,11 @@ public class BenzinRechner {
 	
 	public double verbrauchPro100;	// Menge Benzin, für 100km in Liter
 	public double verbrauchKmRestGeplant;	//benötigtes Benzin für kmRestGeplant
-	public int anzNachtanken;			// so oft muss nachgetankt werden
+	public double anzNachtanken;			// so oft muss nachgetankt werden
 	public double tanken;				// hilft anzNachtanken
 	
 	// ---------------------------- Konstruktor -------------------------------------------------		
-	public BenzinRechner() {
-	}	
+	public BenzinRechner() {}	
 	
 	
 	// ------------------------------ Methoden ---------------------------------------------------
@@ -72,7 +71,7 @@ public class BenzinRechner {
 		}
 		
 		// Anzahl Tankungen für benötigte Liter berechnen
-		private int anzNachtanken(double restLiterBenoetigt, double tankRest){
+		private double anzNachtanken(double restLiterBenoetigt, double tankRest){
 			
 			anzNachtanken = 1;
 			while(restLiterBenoetigt > tankGesamt){
@@ -82,7 +81,7 @@ public class BenzinRechner {
 			return anzNachtanken;
 		}
 		
-		public int anzTankenKmGeplant(){
+		public double anzTankenKmGeplant(){
 			
 			kmRest = tankRest/verbrauchPro100*100;
 			kmRestGeplant = kmGeplant-kmRest;

@@ -15,7 +15,6 @@ public class BenzinRechnerView extends view{
 	
 	public BenzinRechnerView(String linktofxml, String Title) {
 		super(linktofxml, Title);
-		// TODO Auto-generated constructor stub
 	}
 	
 	// Ausgabe des Resultats im Textfeld

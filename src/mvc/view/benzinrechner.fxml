@@ -10,7 +10,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="614.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mvc.controller.BenzinRechnerController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="614.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mvc.controller.BenzinRechnerController">
    <children>
       <Label layoutX="225.0" layoutY="14.0" text="Benzinrechner">
          <font>
@@ -30,7 +30,7 @@
       <Label layoutX="212.0" layoutY="228.0" text="Was möchtest du berechen?" />
       <Button fx:id="btn_kmMitLiterAktuell" layoutX="313.0" layoutY="264.0" mnemonicParsing="false" text="mögliche km mit aktuellem Füllstand" />
       <Button fx:id="btn_literTankenFuerGeplant" layoutX="313.0" layoutY="305.0" mnemonicParsing="false" text="Liter zu tanken für geplante km" />
-      <Button fx:id="btn_anzKmGeplant" layoutX="46.0" layoutY="305.0" mnemonicParsing="false" text="Anzahl Tanken für geplante km" />
+      <Button fx:id="btn_anzTankenKmGeplant" layoutX="46.0" layoutY="305.0" mnemonicParsing="false" text="Anzahl Tanken für geplante km" />
       <Button fx:id="btn_literAktuell" layoutX="46.0" layoutY="346.0" mnemonicParsing="false" text="aktueller Füllstand" />
       <Label layoutX="258.0" layoutY="395.0" text="Das ergebnis:" />
       <TextArea fx:id="output_result" layoutX="44.0" layoutY="421.0" prefHeight="159.0" prefWidth="512.0" />
