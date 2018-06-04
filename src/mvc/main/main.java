@@ -1,5 +1,7 @@
 package mvc.main;
 
+import java.io.File;
+
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -18,6 +20,7 @@ import mvc.view.home;
 public class main extends Application {
 
 	public static void main(String[] args) {
+		playSound();
 		launch(args);
 	}
 
@@ -26,6 +29,13 @@ public class main extends Application {
 		
 		home homeview = new home("../view/home.fxml", "Home");
 		homeview.changeScene(primaryStage);		
+	}
+	
+	public static void playSound() {
+		File f = new File("src/images/background.mp3");
+		Media hit = new Media(f.toURI().toString());
+		MediaPlayer mediaPlayer = new MediaPlayer(hit);
+		mediaPlayer.play();
 	}
 
 }
