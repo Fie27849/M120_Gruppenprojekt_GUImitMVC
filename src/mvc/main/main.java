@@ -5,7 +5,13 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import mvc.view.home;
 
+/**
+ * wird nur gebraucht um die Applikation zu starten
+ * @author Denis
+ *
+ */
 public class main extends Application {
 
 	public static void main(String[] args) {
@@ -14,11 +20,8 @@ public class main extends Application {
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
-		Parent root = FXMLLoader.load(getClass().getResource("../view/home.fxml"));
-        primaryStage.setScene(new Scene(root));
-        primaryStage.setTitle("Home");
-        primaryStage.show();
-		
+		home homeview = new home("../view/home.fxml", "Home");
+		homeview.changeScene(primaryStage);		
 	}
 
 }
