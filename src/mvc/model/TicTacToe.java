@@ -140,7 +140,9 @@ public class TicTacToe {
 				line = this.getField()[0][0] + this.getField()[1][1] + this.getField()[2][2];
 				break;
 			case 8:
-				line = this.getField()[0][2] + this.getField()[1][1] + this.getField()[2][0];
+				line = this.getField()[2][2] + this.getField()[2][1] + this.getField()[2][0];
+				System.out.println(line);
+
 				break;
 
 			default:

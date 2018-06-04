@@ -9,6 +9,11 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import mvc.model.TicTacToe;
 
+/**
+ * Erbt vov MainController
+ * @author Denis
+ *
+ */
 public class TicTacToeController extends MainController {
 	
 	private TicTacToe game = new TicTacToe();
@@ -87,6 +92,7 @@ public class TicTacToeController extends MainController {
 		default:
 			break;
 		}
+		System.out.println(row + " " + column);
 		if(this.game.isGameon()) {
 			this.game.user_input(row, column);
 		} else {

@@ -25,8 +25,18 @@ import mvc.view.VerschluesselungsView;
 import mvc.view.dreiDPunkteView;
 import mvc.view.home;
 
+/**
+ * MainController bzw. der Controller für das home
+ * beinhaltet alle Views sodass weniger Code entsteht
+ * 
+ * @author Denis
+ *
+ */
 public class MainController {
 	
+	/**
+	 * Bei neuer View, das MenuItem hinzufügen
+	 */
 	@FXML
 	private MenuButton myMenuButton;
 	@FXML
@@ -40,12 +50,20 @@ public class MainController {
 	@FXML
 	private MenuItem benzinrechner;
 
+	/**
+	 * Bei neuer hinzufügen neuer View hier als protected definieren
+	 */
 	protected home homeview = new home("../view/home.fxml", "Home");
 	protected BenzinRechnerView BenzinRechnerView = new BenzinRechnerView("../view/benzinrechner.fxml", "Benzin Rechner");
 	protected TicTacToeView TicTacToeView = new TicTacToeView("../view/tictactoe.fxml", "Tic Tac Toe");
 	protected dreiDPunkteView dreiDPunkteView = new dreiDPunkteView("../view/3dpunkte.fxml", "3D Punkte");
 	protected VerschluesselungsView verschluesselungsView = new VerschluesselungsView("../view/textverschluesselung.fxml", "Textverschlüsselung");
 	
+	/**
+	 * Bei neuer View einfach den Case neu erstellen
+	 * @param event
+	 * @throws IOException
+	 */
 	@FXML
 	public void handleMenuClick(ActionEvent event) throws IOException {
 		MenuItem MenuItem = ((MenuItem) event.getSource());
