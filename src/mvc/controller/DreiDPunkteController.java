@@ -3,24 +3,16 @@ package mvc.controller;
 import java.io.File;
 import java.io.IOException;
 
-import javax.sound.sampled.AudioInputStream;
-import javax.sound.sampled.AudioSystem;
-import javax.sound.sampled.Clip;
-
-import com.sun.xml.internal.ws.util.StringUtils;
-
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
 import mvc.model.dreieck3d;
-import mvc.template.model;
-import mvc.template.view;
-import mvc.view.dreiDPunkteView;
 
 public class DreiDPunkteController extends MainController
 {
@@ -81,6 +73,7 @@ public class DreiDPunkteController extends MainController
 			}
 			else
 			{
+				playSound();
 				Alert alert = new Alert(AlertType.ERROR);
 				alert.setTitle("Falsche Eingabe");
 				alert.setHeaderText("Überprüfen Sie die eingegebenen Werte");
@@ -218,15 +211,10 @@ public class DreiDPunkteController extends MainController
 	 * Spielt Error Sound ab
 	 */
 	public void playSound() {
-	    try {
-	        AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new File("../../images/error.mp3").getAbsoluteFile());
-	        Clip clip = AudioSystem.getClip();
-	        clip.open(audioInputStream);
-	        clip.start();
-	    } catch(Exception ex) {
-	        System.out.println("Error with playing sound.");
-	        
-	    }
+		File f = new File("src/images/error.mp3");
+		Media hit = new Media(f.toURI().toString());
+		MediaPlayer mediaPlayer = new MediaPlayer(hit);
+		mediaPlayer.play();
 	}
 	
 }
