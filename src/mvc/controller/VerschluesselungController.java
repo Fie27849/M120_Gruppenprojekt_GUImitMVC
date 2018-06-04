@@ -11,6 +11,7 @@ import mvc.view.VerschluesselungsView;
 
 public class VerschluesselungController extends MainController {
 	
+	// Die Referenzen zu den Textfeldern und Buttons im FXML
 	@FXML
 	private Button codieren;
 	@FXML
@@ -32,6 +33,10 @@ public class VerschluesselungController extends MainController {
 	@FXML
 	public void handleButtonClick(ActionEvent event) throws IOException {
 		switch (((Node) event.getSource()).getId()) {
+		//Das wird ausgeführt wenn der verschlüsseln Button gedrückt wird
+		//Es wird geprüft ob ein Code Wort eingegeben wurde, wenn nicht wird ein standard Codewort gesetzt
+		//Es wird die entsprechende Funktion zur verschlüsselung im Model aufgerufen und die Parameter werden übergeben
+		// Rückgabewerte werden der View übergeben
 		case "codieren":
 			String code = codeword.getText();
 			if(code.length() == 0){
@@ -40,6 +45,9 @@ public class VerschluesselungController extends MainController {
 				this.verschluesselungsView.setCode(this.model.verschluesseln(textInput.getText(), codeword.getText()), outputCode);
 			}
 			break;
+			//Das wird ausgeführt wenn der decodieren Button gedrückt wird
+			//Es wird geprüft ob ein Code Wort eingegeben wurde, wenn nicht wird ein standard Codewort gesetzt
+			//Es wird die entsprechende Funktion zur Decodierung im Model aufgerufen und die Parameter werden übergeben
 		case "decodieren":
 			String decode = codeword.getText();
 			if(decode.length() == 0){
