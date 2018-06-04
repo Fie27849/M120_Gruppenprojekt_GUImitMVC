@@ -46,7 +46,7 @@ public class DreiDPunkteController extends MainController
 	@FXML TextField cout;
 
 	private dreieck3d dreiDPunkteModel = new dreieck3d();
-	private dreiDPunkteView myView = new dreiDPunkteView("3dpunkte.fxml", "3D Punkte");
+	//private dreiDPunkteView myView = new dreiDPunkteView("3dpunkte.fxml", "3D Punkte");
 	
 	@FXML
 	public void handleButtonClick(ActionEvent event) throws IOException {
@@ -54,7 +54,7 @@ public class DreiDPunkteController extends MainController
 		case "btnberechnen":
 			Double[] ret = new Double[5];
 			ret = berechnen(ax, ay, az, bx, by, bz, cx, cy, cz, output);
-			myView.setflaeche(ret[0],ret[1],ret[2],ret[3],ret[4], output, gammaout, aout,bout,cout);
+			dreiDPunkteView.setflaeche(ret[0],ret[1],ret[2],ret[3],ret[4], output, gammaout, aout,bout,cout);
 			break;
 		
 		default:

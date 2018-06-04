@@ -27,7 +27,7 @@ public class VerschluesselungController extends MainController {
 	private TextArea codeword;
 
 	private TextVerschluesseln model = new TextVerschluesseln();
-	private VerschluesselungsView view = new VerschluesselungsView("textverschluesselung.fxml","Textverschlüsselung");
+	//private VerschluesselungsView view = new VerschluesselungsView("textverschluesselung.fxml","Textverschlüsselung");
 
 	@FXML
 	public void handleButtonClick(ActionEvent event) throws IOException {
@@ -35,21 +35,21 @@ public class VerschluesselungController extends MainController {
 		case "codieren":
 			String code = codeword.getText();
 			if(code.length() == 0){
-				this.view.setCode(this.model.verschluesseln(textInput.getText(), "code"), outputCode);
+				this.verschluesselungsView.setCode(this.model.verschluesseln(textInput.getText(), "code"), outputCode);
 			}else{
-				this.view.setCode(this.model.verschluesseln(textInput.getText(), codeword.getText()), outputCode);
+				this.verschluesselungsView.setCode(this.model.verschluesseln(textInput.getText(), codeword.getText()), outputCode);
 			}
 			break;
 		case "decodieren":
 			String decode = codeword.getText();
 			if(decode.length() == 0){
-				this.view.setDecode(this.model.decoder(textDecodeInput.getText(), "code"), outputDecode);
+				this.verschluesselungsView.setDecode(this.model.decoder(textDecodeInput.getText(), "code"), outputDecode);
 			}else{
-				this.view.setDecode(this.model.decoder(textDecodeInput.getText(), codeword.getText()), outputDecode);
+				this.verschluesselungsView.setDecode(this.model.decoder(textDecodeInput.getText(), codeword.getText()), outputDecode);
 			}
 			break;
 		case "clear":
-			this.view.setClear(textInput, outputCode, outputDecode, textDecodeInput, codeword);
+			this.verschluesselungsView.setClear(textInput, outputCode, outputDecode, textDecodeInput, codeword);
 			break;
 		default:
 			break;

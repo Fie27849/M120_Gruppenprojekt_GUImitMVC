@@ -40,11 +40,11 @@ public class MainController {
 	@FXML
 	private MenuItem benzinrechner;
 
-	private home homeview = new home("../view/home.fxml", "Home");
-	private BenzinRechnerView BenzinRechnerView = new BenzinRechnerView("../view/benzinrechner.fxml", "Benzin Rechner");
+	protected home homeview = new home("../view/home.fxml", "Home");
+	protected BenzinRechnerView BenzinRechnerView = new BenzinRechnerView("../view/benzinrechner.fxml", "Benzin Rechner");
 	protected TicTacToeView TicTacToeView = new TicTacToeView("../view/tictactoe.fxml", "Tic Tac Toe");
-	private dreiDPunkteView dreiDPunkteView = new dreiDPunkteView("../view/3dpunkte.fxml", "3D Punkte");
-	private VerschluesselungsView verschluesselungsView = new VerschluesselungsView("../view/textverschluesselung.fxml", "Textverschlüsselung");
+	protected dreiDPunkteView dreiDPunkteView = new dreiDPunkteView("../view/3dpunkte.fxml", "3D Punkte");
+	protected VerschluesselungsView verschluesselungsView = new VerschluesselungsView("../view/textverschluesselung.fxml", "Textverschlüsselung");
 	
 	@FXML
 	public void handleMenuClick(ActionEvent event) throws IOException {
