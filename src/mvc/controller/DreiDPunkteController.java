@@ -1,6 +1,11 @@
 package mvc.controller;
 
+import java.io.File;
 import java.io.IOException;
+
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
 
 import com.sun.xml.internal.ws.util.StringUtils;
 
@@ -207,6 +212,21 @@ public class DreiDPunkteController extends MainController
 		ret[4] = seiten[2];
 		//Array zurüchgeben
 		return ret;
+	}
+	
+	/**
+	 * Spielt Error Sound ab
+	 */
+	public void playSound() {
+	    try {
+	        AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new File("../../images/error.mp3").getAbsoluteFile());
+	        Clip clip = AudioSystem.getClip();
+	        clip.open(audioInputStream);
+	        clip.start();
+	    } catch(Exception ex) {
+	        System.out.println("Error with playing sound.");
+	        
+	    }
 	}
 	
 }
