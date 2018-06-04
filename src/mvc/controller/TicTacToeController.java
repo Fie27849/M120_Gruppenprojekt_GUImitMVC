@@ -95,11 +95,10 @@ public class TicTacToeController extends MainController {
 		default:
 			break;
 		}
-		System.out.println(row + " " + column);
 		if(this.game.isGameon()) {
 			this.game.user_input(row, column);
 		} else {
-			this.TicTacToeView.setLabelText(info, "The game is over");
+			this.TicTacToeView.setLabelText(info, "Gameover");
 		}
 		if(this.game.isTurn()) {
 			this.TicTacToeView.setLabelText(currentPlayer, "O");

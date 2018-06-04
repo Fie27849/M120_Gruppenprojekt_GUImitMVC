@@ -47,7 +47,7 @@ public class TicTacToe {
 			draw_field();
 			check_win();
 		} else {
-			System.out.println("Ungültiger Spielzug!");
+			//System.out.println("Ungültiger Spielzug!");
 		}
 		if(full_field()) {
 			this.gameon = false;
@@ -96,12 +96,12 @@ public class TicTacToe {
 	private void draw_field(){
 		for (int i = 0; i < getField().length; i++) {
 			for (int j = 0; j < getField().length; j++) {
-				System.out.print(this.getField()[i][j]);
-				System.out.print(" | ");
+				//System.out.print(this.getField()[i][j]);
+				//System.out.print(" | ");
 			}
-			System.out.println();
-			System.out.print("- - - - - -");
-			System.out.println();
+			//System.out.println();
+			//System.out.print("- - - - - -");
+			//System.out.println();
 		}
 	}
 	
@@ -144,7 +144,7 @@ public class TicTacToe {
 				break;
 			}
 			if(check_line(line)) {
-				System.out.println("We have a Winner");
+				//System.out.println("We have a Winner");
 				this.gameon = false;
 				break;
 			}
@@ -189,7 +189,7 @@ public class TicTacToe {
 		debug_field();
 		draw_field();
 		check_win();
-		System.out.println(this.gameon ? "Nothing" : "Win");;
+		//System.out.println(this.gameon ? "Nothing" : "Win");;
 	}
 	/**
 	 * Diese Methode fuellt das Spielfeld aus.
