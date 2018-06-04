@@ -83,22 +83,20 @@ public class TicTacToeController extends MainController {
 		case "newGame":
 			this.game = new TicTacToe();
 			this.TicTacToeView.setLabelText(info, "");
-			//this.TicTacToeView.setLabelText(currentPlayer, "X");
+			this.TicTacToeView.setLabelText(currentPlayer, "O");
 		default:
 			break;
 		}
 		if(this.game.isGameon()) {
 			this.game.user_input(row, column);
 		} else {
-			this.TicTacToeView.setLabelText(info, "We have a Winner");
+			this.TicTacToeView.setLabelText(info, "The game is over");
 		}
 		if(this.game.isTurn()) {
-			this.TicTacToeView.setLabelText(currentPlayer, "X");
-		} else {
 			this.TicTacToeView.setLabelText(currentPlayer, "O");
+		} else {
+			this.TicTacToeView.setLabelText(currentPlayer, "X");
 		}
-		
-		
 		
 		this.TicTacToeView.draw_field(a1, a2, a3, b1, b2, b3, c1, c2, c3, this.game.getField());
 	}
