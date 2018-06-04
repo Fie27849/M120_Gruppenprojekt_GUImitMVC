@@ -4,12 +4,9 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-<<<<<<< HEAD
 import javafx.scene.image.Image;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
-=======
->>>>>>> parent of 66895d2... sound
 import javafx.stage.Stage;
 import mvc.view.home;
 
