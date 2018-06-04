@@ -113,36 +113,31 @@ public class TicTacToe {
 	 * */
 	private void check_win(){
 		String line = "";
-		for (int i = 0; i < 9; i++) {
+		for (int i = 0; i < 8; i++) {
 			switch (i) {
 			case 0:
-				line = this.getField()[0][0] + this.getField()[1][0] + this.getField()[2][0];
-				break;
-			case 1:
-				line = this.getField()[1][0] + this.getField()[1][1] + this.getField()[1][2];
-				break;
-			case 2:
-				line = this.getField()[2][0] + this.getField()[2][1] + this.getField()[2][2];
-				break;
-			case 3:
 				line = this.getField()[0][0] + this.getField()[0][1] + this.getField()[0][2];
 				break;
-			case 4:
+			case 1:
 				line = this.getField()[0][0] + this.getField()[1][0] + this.getField()[2][0];
 				break;
-			case 5:
-				line = this.getField()[1][0] + this.getField()[1][1] + this.getField()[1][2];
-				break;
-			case 6:
-				line = this.getField()[2][0] + this.getField()[2][1] + this.getField()[2][2];
-				break;
-			case 7:
+			case 2:
 				line = this.getField()[0][0] + this.getField()[1][1] + this.getField()[2][2];
 				break;
-			case 8:
-				line = this.getField()[2][2] + this.getField()[2][1] + this.getField()[2][0];
-				System.out.println(line);
-
+			case 3:
+				line = this.getField()[1][0] + this.getField()[1][1] + this.getField()[1][2];
+				break;
+			case 4:
+				line = this.getField()[2][0] + this.getField()[2][1] + this.getField()[2][2];
+				break;
+			case 5:
+				line = this.getField()[0][1] + this.getField()[1][1] + this.getField()[2][1];
+				break;
+			case 6:
+				line = this.getField()[0][2] + this.getField()[1][2] + this.getField()[2][2];
+				break;
+			case 7:
+				line = this.getField()[2][0] + this.getField()[1][1] + this.getField()[0][2];
 				break;
 
 			default:

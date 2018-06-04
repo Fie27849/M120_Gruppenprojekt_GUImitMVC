@@ -2,7 +2,9 @@ package mvc.view;
 
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-
+/**
+ * View welches formatierung, text usw. verändert
+ */
 public class TicTacToeView extends view {
 
 	public TicTacToeView(String linktofxml, String Title) {

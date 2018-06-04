@@ -43,7 +43,10 @@ public class TicTacToeController extends MainController {
 	@FXML
 	private Label currentPlayer;
 	
-	
+	/**
+	 * Spielfeld angeklickt
+	 * @param event
+	 */
 	@FXML
 	public void handleButtonClick(ActionEvent event) {
 		int row = 3;
@@ -107,7 +110,9 @@ public class TicTacToeController extends MainController {
 		this.TicTacToeView.draw_field(a1, a2, a3, b1, b2, b3, c1, c2, c3, this.game.getField());
 	}
 	
-	
+	/**
+	 * Code steht schon beim MainController
+	 */
 	@FXML
 	public void handleMenuClick(ActionEvent event) throws IOException {
 		super.handleMenuClick(event);
