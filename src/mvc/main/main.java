@@ -6,6 +6,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.stage.Stage;
@@ -26,6 +27,7 @@ public class main extends Application {
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
+		primaryStage.getIcons().add(new Image("file:../../images/tool.png"));
 		home homeview = new home("../view/home.fxml", "Home");
 		homeview.changeScene(primaryStage);		
 	}

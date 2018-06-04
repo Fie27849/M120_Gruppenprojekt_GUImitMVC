@@ -15,6 +15,7 @@ import javafx.scene.control.Menu;
 import javafx.scene.control.MenuButton;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.stage.Stage;
@@ -72,6 +73,7 @@ public class MainController {
 	public void handleMenuClick(ActionEvent event) throws IOException {
 		MenuItem MenuItem = ((MenuItem) event.getSource());
 		Stage stage = (Stage) myMenuButton.getScene().getWindow();
+		
 		switch (MenuItem.getId()) {
 		case "punkte3d":
 //			this.dreiDPunkteView = new dreiDPunkteView("../view/3dpunkte.fxml", "3D Punkte");
