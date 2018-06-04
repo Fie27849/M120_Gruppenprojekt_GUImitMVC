@@ -9,11 +9,19 @@ public class TextVerschluesseln{
 	private String pwd = "passwort";
 	int zpwd;
 	
+	/**
+	 * Programm zur Textverschlüsselung und entschlüsselung
+	 */
 	
 	public TextVerschluesseln(){
 		
 	}
 	
+	/**
+	 * Text und Code Wort wird übergeben, jeder Buchstabe wird mit dem Buchstabe vom Codewort addiert
+	 * Wenn das Code Wort zu ende ist wird wieder mit dem ersten Buchstabe angefangen
+	 * Verschlüsselter Text wird zurückgegeben
+	 */
 	
 	public String verschluesseln(String text, String pwd){
 		
@@ -42,6 +50,11 @@ public class TextVerschluesseln{
 		return verschluesselterText;
 	}
 	
+	/**
+	 * Verschlüsselter Text und Code Wort wird übergeben, jeder Buchstabe wird mit dem Buchstabe vom Codewort subtrahiert
+	 * Wenn das Code Wort zu ende ist wird wieder mit dem ersten Buchstabe angefangen
+	 * entschlüsselter Text wird zurückgegeben
+	 */
 	
 	public String decoder(String text, String pwd){
 		
