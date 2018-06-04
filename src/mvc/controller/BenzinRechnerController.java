@@ -22,6 +22,8 @@ public class BenzinRechnerController extends MainController {
 	@FXML
 	private Button btn_anzTankenKmGeplant;
 	@FXML
+	private Button btn_leeren;
+	@FXML
 	private Button btn_literAktuell;
 	@FXML
 	private TextField input_verbrauch;
@@ -43,7 +45,7 @@ public class BenzinRechnerController extends MainController {
 	
 	// Werte von input Feldern in Variabeln schreiben
 	public void getValues(){
-		if(!input_tankTotal.getText().isEmpty()){
+		if(!input_tankTotal.getText().isEmpty() && input_tankTotal.getText().matches("[0-9]+")){
 			BenzinRechnerModel.tankGesamt = Double.parseDouble(input_tankTotal.getText());
 		}
 		if(!input_verbrauch.getText().isEmpty()){
@@ -81,6 +83,13 @@ public class BenzinRechnerController extends MainController {
 			break;
 		case "btn_anzTankenKmGeplant":
 			BenzinRechnerView.ausgabe("Du musst für die geplante Strecke ", " Mal tanken.",  BenzinRechnerModel.anzTankenKmGeplant(), output_result);
+			break;
+		case "btn_leeren":
+			output_result.setText("");
+			input_verbrauch.setText("");
+			input_tankTotal.setText("");
+			input_kmSeitTanken.setText("");
+			input_kmGeplant.setText("");
 			break;
 		default:
 			break;
