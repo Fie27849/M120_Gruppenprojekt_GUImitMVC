@@ -9,7 +9,11 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import mvc.template.main;
-
+/**
+ * View Klass mit Standardfunktionen
+ * @author Denis
+ *
+ */
 public class view 
 {
 	private String linktofxml;

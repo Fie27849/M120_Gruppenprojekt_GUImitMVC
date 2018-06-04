@@ -10,7 +10,7 @@ import javafx.scene.control.Label;
 import mvc.model.TicTacToe;
 
 /**
- * Erbt vov MainController
+ * Erbt von MainController
  * @author Denis
  *
  */
@@ -44,7 +44,7 @@ public class TicTacToeController extends MainController {
 	private Label currentPlayer;
 	
 	/**
-	 * Spielfeld angeklickt
+	 * Spielfeld angeklickt und Funktion vom Model wird aufgerufen
 	 * @param event
 	 */
 	@FXML

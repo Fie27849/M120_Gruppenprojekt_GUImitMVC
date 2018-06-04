@@ -1,5 +1,9 @@
 package mvc.template;
-
+/**
+ * Template wird nicht gestartet
+ * @author Denis
+ *
+ */
 public class model {
 
 	private String name;

@@ -8,7 +8,11 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-
+/**
+ * Template wird nicht gestartet
+ * @author Denis
+ *
+ */
 public class view {
 
 	private String linktofxml;

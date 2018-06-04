@@ -1,4 +1,4 @@
-How to clone Repositroy in Eclipse
+##How to clone Repositroy in Eclipse
 
 File -> Import
 
@@ -22,18 +22,20 @@ Speicherort auswählen
 
 "Import existing projects" Next drücken
 
-Erklärung MVC
+##Erklärung MVC
 
-mvc.controller:
+###mvc.controller:
 Event Handler
 Button Klicks
 
-mvc.main:
+###mvc.main:
 Startet den Controller.
 
-mvc.model:
+###mvc.model:
 Logik, mit anderen Worten die Klasse & ihre Methoden.
 
-mvc.view:
+###mvc.view:
 Alle .xml files und Java Klasse welche erstellt werden um das xml zu laden
 
+###mvc.template:
+Template von einem simplen MVC

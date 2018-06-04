@@ -6,7 +6,11 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-
+/**
+ * Template wird nicht gestartet
+ * @author Denis
+ *
+ */
 public class main extends Application {
 
 

@@ -6,7 +6,11 @@ import javafx.fxml.FXML;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
-
+/**
+ * Template wird nicht gestartet
+ * @author Denis
+ *
+ */
 public class controller_page {
 
 	@FXML
