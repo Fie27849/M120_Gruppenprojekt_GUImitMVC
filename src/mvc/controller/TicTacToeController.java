@@ -32,12 +32,72 @@ public class TicTacToeController extends MainController {
 	@FXML
 	private Button c3;
 	@FXML
+	private Button newGame;
+	@FXML
 	private Label info;
+	@FXML
+	private Label currentPlayer;
+	
 	
 	@FXML
 	public void handleButtonClick(ActionEvent event) {
-		System.out.println(((Node) event.getSource()).getId());
-		this.game.debug();
+		int row = 3;
+		int column = 3;
+		switch (((Node) event.getSource()).getId()) {
+		case "a1":
+			row = 0;
+			column = 0;
+			break;
+		case "a2":
+			row = 1;
+			column = 0;
+			break;
+		case "a3":
+			row = 2;
+			column = 0;
+			break;
+		case "b1":
+			row = 0;
+			column = 1;
+			break;
+		case "b2":
+			row = 1;
+			column = 1;
+			break;
+		case "b3":
+			row = 2;
+			column = 1;
+			break;
+		case "c1":
+			row = 0;
+			column = 2;
+			break;
+		case "c2":
+			row = 1;
+			column = 2;
+			break;
+		case "c3":
+			row = 2;
+			column = 2;
+			break;
+		case "newGame":
+			this.game = new TicTacToe();
+			this.TicTacToeView.setLabelText(info, "");
+			this.TicTacToeView.setLabelText(currentPlayer, "O");
+		default:
+			break;
+		}
+		if(this.game.isGameon()) {
+			this.game.user_input(row, column);
+		} else {
+			this.TicTacToeView.setLabelText(info, "The game is over");
+		}
+		if(this.game.isTurn()) {
+			this.TicTacToeView.setLabelText(currentPlayer, "O");
+		} else {
+			this.TicTacToeView.setLabelText(currentPlayer, "X");
+		}
+		
 		this.TicTacToeView.draw_field(a1, a2, a3, b1, b2, b3, c1, c2, c3, this.game.getField());
 	}
 	

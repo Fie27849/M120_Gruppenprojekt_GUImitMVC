@@ -33,7 +33,7 @@
          </font>
       </Button>
       <Label layoutX="14.0" layoutY="118.0" text="Current Player:" />
-      <Label layoutX="110.0" layoutY="118.0" text="X" />
+      <Label fx:id="currentPlayer" layoutX="110.0" layoutY="118.0" text="O" />
       <Button fx:id="a2" layoutX="247.0" layoutY="58.0" mnemonicParsing="false" onAction="#handleButtonClick" prefHeight="106.0" prefWidth="106.0">
          <font>
             <Font size="52.0" />
@@ -75,5 +75,6 @@
          </font>
       </Button>
       <Label fx:id="info" layoutX="14.0" layoutY="169.0" />
+      <Button fx:id="newGame" layoutX="503.0" layoutY="343.0" mnemonicParsing="false" text="newGame" onAction="#handleButtonClick" />
    </children>
 </AnchorPane>

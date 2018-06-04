@@ -1,6 +1,7 @@
 package mvc.view;
 
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 
 public class TicTacToeView extends view {
 
@@ -24,13 +25,16 @@ public class TicTacToeView extends view {
 		setButtonText(c2, field[2][1]);
 		setButtonText(c3, field[2][2]);
 
-		System.out.println();
-		System.out.print("- - - - - -");
-		System.out.println();
 	}
 
 	public void setButtonText(Button btn, String text) {
 		btn.setText(text);
 	}
+
+	public void setLabelText(Label info, String string) {
+		info.setText(string);
+	}
+	
+	
 
 }
