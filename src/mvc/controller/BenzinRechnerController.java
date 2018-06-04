@@ -43,10 +43,19 @@ public class BenzinRechnerController extends MainController {
 	
 	// Werte von input Feldern in Variabeln schreiben
 	public void getValues(){
-		BenzinRechnerModel.tankGesamt = Double.parseDouble(input_tankTotal.getText());
-		BenzinRechnerModel.verbrauchPro100 = Double.parseDouble(input_verbrauch.getText());
-		BenzinRechnerModel.kmGeplant = Double.parseDouble(input_kmGeplant.getText());
-		BenzinRechnerModel.kmGefahren = Double.parseDouble(input_kmSeitTanken.getText());
+		if(!input_tankTotal.getText().isEmpty()){
+			BenzinRechnerModel.tankGesamt = Double.parseDouble(input_tankTotal.getText());
+		}
+		if(!input_verbrauch.getText().isEmpty()){
+			BenzinRechnerModel.verbrauchPro100 = Double.parseDouble(input_verbrauch.getText());
+		}
+		if(!input_kmGeplant.getText().isEmpty()){
+			BenzinRechnerModel.kmGeplant = Double.parseDouble(input_kmGeplant.getText());
+		}
+		if(!input_kmSeitTanken.getText().isEmpty()){
+			BenzinRechnerModel.kmGefahren = Double.parseDouble(input_kmSeitTanken.getText());
+		}
+
 	}
 	
 	@FXML
@@ -59,19 +68,19 @@ public class BenzinRechnerController extends MainController {
 		getValues();
 		switch (((Node) event.getSource()).getId()) {
 		case "btn_kmMitTankVoll":
-			BenzinRechnerView.ausgabe(BenzinRechnerModel.kmMitTankVoll(), output_result);
+			BenzinRechnerView.ausgabe("Du kannst mit einem vollen Tank ", " km weit fahren.", BenzinRechnerModel.kmMitTankVoll(), output_result);
 			break;
 		case "btn_kmMitLiterAktuell":
-			BenzinRechnerView.ausgabe(BenzinRechnerModel.kmMitLiterAktuell(), output_result);
+			BenzinRechnerView.ausgabe("Du kannst mit dem aktuellen Füllstand ", " km weit fahren.",  BenzinRechnerModel.kmMitLiterAktuell(), output_result);
 			break;
 		case "btn_literAktuell":
-			BenzinRechnerView.ausgabe(BenzinRechnerModel.literAktuell(), output_result);
+			BenzinRechnerView.ausgabe("Es sind im Moment ", " Liter im Tank",  BenzinRechnerModel.literAktuell(), output_result);
 			break;
 		case "btn_literTankenFuerGeplant":
-			BenzinRechnerView.ausgabe(BenzinRechnerModel.literTankenFuerGeplant(), output_result);
+			BenzinRechnerView.ausgabe("Du musst für die geplante Strecke ", " Liter tanken.",  BenzinRechnerModel.literTankenFuerGeplant(), output_result);
 			break;
 		case "btn_anzTankenKmGeplant":
-			BenzinRechnerView.ausgabe(BenzinRechnerModel.anzTankenKmGeplant(), output_result);
+			BenzinRechnerView.ausgabe("Du musst für die geplante Strecke ", " Mal tanken.",  BenzinRechnerModel.anzTankenKmGeplant(), output_result);
 			break;
 		default:
 			break;

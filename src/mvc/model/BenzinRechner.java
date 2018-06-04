@@ -89,8 +89,6 @@ public class BenzinRechner {
 			
 			if(verbrauchKmRestGeplant > tankGesamt){
 				anzNachtanken = anzNachtanken(verbrauchKmRestGeplant, tankRest);
-				
-				System.out.println("Das passt aber nicht auf einmal in deinen Tank.\nDu musst " + anzNachtanken + " mal tanken.");
 			}
 			
 			return anzNachtanken;

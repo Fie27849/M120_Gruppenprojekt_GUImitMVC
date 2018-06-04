@@ -18,9 +18,12 @@ public class BenzinRechnerView extends view{
 	}
 	
 	// Ausgabe des Resultats im Textfeld
-	public void ausgabe(Double result, TextArea output_result){
+	public void ausgabe(String Text, String Text2, Double result, TextArea output_result){
 		
-		output_result.setText(result.toString());
+		output_result.appendText(Text);
+		output_result.appendText(result.toString());
+		output_result.appendText(Text2);
+		output_result.appendText("\n");
 		
 	}
 
