@@ -10,7 +10,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="619.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mvc.controller.BenzinRechnerController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="610.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mvc.controller.BenzinRechnerController">
    <children>
       <Label layoutX="405.0" layoutY="28.0" text="Benzinrechner">
          <font>
@@ -45,6 +45,6 @@
             <MenuItem fx:id="benzinrechner" mnemonicParsing="false" onAction="#handleMenuClick" text="Benzinrechner" />
          </items>
       </MenuButton>
-      <Button fx:id="btn_leeren" layoutX="313.0" layoutY="346.0" mnemonicParsing="false" onAction="#handleButtonClick" prefHeight="27.0" prefWidth="242.0" text="alle Felder leeren" />
+      <Button fx:id="btn_leeren" layoutX="313.0" layoutY="346.0" mnemonicParsing="false" onAction="#handleButtonClick" prefHeight="27.0" prefWidth="242.0" text="Resultate leeren" />
    </children>
 </AnchorPane>

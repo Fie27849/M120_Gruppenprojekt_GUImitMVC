@@ -4,6 +4,8 @@ import java.io.IOException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
@@ -13,6 +15,7 @@ import mvc.view.BenzinRechnerView;
 
 public class BenzinRechnerController extends MainController {
 
+	// definieren der Eingabefelder und Buttons und des Ausgabefeldes
 	@FXML
 	private Button btn_kmMitTankVoll;
 	@FXML
@@ -37,34 +40,73 @@ public class BenzinRechnerController extends MainController {
 	private TextArea output_result;
 	
 
-
+	//dem Controller zeigen, wo er das Model findet
 	private BenzinRechner BenzinRechnerModel = new BenzinRechner();
 	//private BenzinRechnerView BenzinRechnerView = new BenzinRechnerView("benzinrechner.fxml", "Benzinrechner");
 
-
 	
-	// Werte von input Feldern in Variabeln schreiben
+	// prüft, ob die Eingabe aus Zahlen besteht
+	public boolean isNumeric(String str)
+	{
+		  try  
+		  {  
+		    double d = Double.parseDouble(str);  
+		  }  
+		  catch(NumberFormatException nfe)  
+		  {  
+		    return false;  
+		  }  
+		  return true;  
+	}
+	
+	// Werte von input Feldern in Variabeln schreiben und Eingabefehler abfangen
 	public void getValues(){
-		if(!input_tankTotal.getText().isEmpty() && input_tankTotal.getText().matches("[0-9]+")){
+		if(!input_tankTotal.getText().isEmpty() && isNumeric(input_tankTotal.getText())){
 			BenzinRechnerModel.tankGesamt = Double.parseDouble(input_tankTotal.getText());
+		}else{
+			Alert alert = new Alert(AlertType.ERROR);
+			alert.setTitle("ACHTUNG !!!");
+			alert.setHeaderText("Fehlerhafte Eingabe in Feld Tankvolumen:");
+			alert.setContentText("Es dürfen nur Zahlen verwendet werden.\n\nFolgende Felder müssen ausgefüllt werden:\n– Tankvolumen\n– Verbrauch auf 100km");
+			alert.showAndWait();
 		}
-		if(!input_verbrauch.getText().isEmpty()){
+		if(!input_verbrauch.getText().isEmpty() && isNumeric(input_verbrauch.getText())){
 			BenzinRechnerModel.verbrauchPro100 = Double.parseDouble(input_verbrauch.getText());
+		}else{
+			Alert alert = new Alert(AlertType.ERROR);
+			alert.setTitle("ACHTUNG !!!");
+			alert.setHeaderText("Fehlerhafte Eingabe in Feld Verbrauch auf 100km:");
+			alert.setContentText("Es dürfen nur Zahlen verwendet werden.\n\nFolgende Felder müssen ausgefüllt werden:\n– Tankvolumen\n– Verbrauch auf 100km");
+			alert.showAndWait();
 		}
-		if(!input_kmGeplant.getText().isEmpty()){
-			BenzinRechnerModel.kmGeplant = Double.parseDouble(input_kmGeplant.getText());
-		}
-		if(!input_kmSeitTanken.getText().isEmpty()){
+		if(!input_kmSeitTanken.getText().isEmpty() && isNumeric(input_kmSeitTanken.getText())){
 			BenzinRechnerModel.kmGefahren = Double.parseDouble(input_kmSeitTanken.getText());
+		}else if(!input_kmSeitTanken.getText().isEmpty() && !isNumeric(input_kmSeitTanken.getText())){
+			Alert alert = new Alert(AlertType.ERROR);
+			alert.setTitle("ACHTUNG !!!");
+			alert.setHeaderText("Fehlerhafte Eingabe in Feld km seit letztem Tanken:");
+			alert.setContentText("Es dürfen nur Zahlen verwendet werden.\n\nFolgende Felder müssen ausgefüllt werden:\n– Tankvolumen\n– Verbrauch auf 100km");
+			alert.showAndWait();
+		}
+		if(!input_kmGeplant.getText().isEmpty() && isNumeric(input_kmGeplant.getText())){
+			BenzinRechnerModel.kmGeplant = Double.parseDouble(input_kmGeplant.getText());
+		}else if(!input_kmGeplant.getText().isEmpty() && !isNumeric(input_kmGeplant.getText())){
+			Alert alert = new Alert(AlertType.ERROR);
+			alert.setTitle("ACHTUNG !!!");
+			alert.setHeaderText("Fehlerhafte Eingabe in Feld geplante km:");
+			alert.setContentText("Es dürfen nur Zahlen verwendet werden.\n\nFolgende Felder müssen ausgefüllt werden:\n– Tankvolumen\n– Verbrauch auf 100km");
+			alert.showAndWait();
 		}
 
 	}
 	
+	// handelt das Auswählen und Wechseln zuwischen den Menupunkten
 	@FXML
 	public void handleMenuClick(ActionEvent event) throws IOException {
 		super.handleMenuClick(event);
 	}
 	
+	// handelt die Klicks auf die Buttons, ruft die entsprechenden Berechnungen auf
 	@FXML
 	public void handleButtonClick(ActionEvent event) throws IOException {
 		getValues();
@@ -86,10 +128,6 @@ public class BenzinRechnerController extends MainController {
 			break;
 		case "btn_leeren":
 			output_result.setText("");
-			input_verbrauch.setText("");
-			input_tankTotal.setText("");
-			input_kmSeitTanken.setText("");
-			input_kmGeplant.setText("");
 			break;
 		default:
 			break;
