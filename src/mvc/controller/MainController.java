@@ -1,5 +1,6 @@
 package mvc.controller;
 
+import java.io.File;
 import java.io.IOException;
 
 import javafx.event.ActionEvent;
@@ -14,6 +15,8 @@ import javafx.scene.control.Menu;
 import javafx.scene.control.MenuButton;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.TextField;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
 import javafx.stage.Stage;
 import mvc.model.TextVerschluesseln;
 import mvc.template.main;
@@ -50,6 +53,7 @@ public class MainController {
 	@FXML
 	private MenuItem benzinrechner;
 
+	
 	/**
 	 * Bei neuer hinzufügen neuer View hier als protected definieren
 	 */
@@ -93,4 +97,7 @@ public class MainController {
 		}
 		
 	}
+	
+	
+	
 }
