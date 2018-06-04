@@ -10,33 +10,33 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="614.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mvc.controller.BenzinRechnerController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="629.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mvc.controller.BenzinRechnerController">
    <children>
-      <Label layoutX="225.0" layoutY="14.0" text="Benzinrechner">
+      <Label layoutX="405.0" layoutY="28.0" text="Benzinrechner">
          <font>
             <Font size="22.0" />
          </font>
       </Label>
       <Label layoutX="50.0" layoutY="134.0" text="Tankvolumen" />
       <TextField fx:id="input_verbrauch" layoutX="210.0" layoutY="173.0" prefHeight="27.0" prefWidth="64.0" />
-      <Label layoutX="196.0" layoutY="81.0" text="Bitte gib alle bekannten Werte ein" />
+      <Label layoutX="50.0" layoutY="90.0" text="Bitte gib alle bekannten Werte ein" />
       <Label layoutX="50.0" layoutY="178.0" text="Verbrauch auf 100km" />
       <Label layoutX="322.0" layoutY="126.0" text="km seit letztem Tanken" />
       <Label layoutX="322.0" layoutY="178.0" text="geplante km" />
       <TextField fx:id="input_tankTotal" layoutX="210.0" layoutY="129.0" prefHeight="27.0" prefWidth="64.0" />
       <TextField fx:id="input_kmSeitTanken" layoutX="492.0" layoutY="121.0" prefHeight="27.0" prefWidth="64.0" />
       <TextField fx:id="input_kmGeplant" layoutX="492.0" layoutY="173.0" prefHeight="27.0" prefWidth="64.0" />
-      <Button fx:id="btn_kmMitTankVoll" onAction="#handleButtonClick" layoutX="46.0" layoutY="264.0" mnemonicParsing="false" text="mögliche km mit vollem Tank" />
-      <Label layoutX="212.0" layoutY="228.0" text="Was möchtest du berechen?" />
-      <Button fx:id="btn_kmMitLiterAktuell" onAction="#handleButtonClick" layoutX="313.0" layoutY="264.0" mnemonicParsing="false" text="mögliche km mit aktuellem Füllstand" />
-      <Button fx:id="btn_literTankenFuerGeplant" onAction="#handleButtonClick" layoutX="313.0" layoutY="305.0" mnemonicParsing="false" text="Liter zu tanken für geplante km" />
-      <Button fx:id="btn_anzTankenKmGeplant" onAction="#handleButtonClick" layoutX="46.0" layoutY="305.0" mnemonicParsing="false" text="Anzahl Tanken für geplante km" />
-      <Button fx:id="btn_literAktuell" onAction="#handleButtonClick" layoutX="46.0" layoutY="346.0" mnemonicParsing="false" text="aktueller Füllstand" />
-      <Label layoutX="258.0" layoutY="395.0" text="Das ergebnis:" />
+      <Button fx:id="btn_kmMitTankVoll" layoutX="46.0" layoutY="264.0" mnemonicParsing="false" onAction="#handleButtonClick" prefHeight="27.0" prefWidth="242.0" text="mögliche km mit vollem Tank" />
+      <Label layoutX="46.0" layoutY="232.0" text="Was möchtest du berechen?" />
+      <Button fx:id="btn_kmMitLiterAktuell" layoutX="313.0" layoutY="264.0" mnemonicParsing="false" onAction="#handleButtonClick" text="mögliche km mit aktuellem Füllstand" />
+      <Button fx:id="btn_literTankenFuerGeplant" layoutX="313.0" layoutY="305.0" mnemonicParsing="false" onAction="#handleButtonClick" prefHeight="27.0" prefWidth="242.0" text="Liter zu tanken für geplante km" />
+      <Button fx:id="btn_anzTankenKmGeplant" layoutX="46.0" layoutY="305.0" mnemonicParsing="false" onAction="#handleButtonClick" prefHeight="27.0" prefWidth="242.0" text="Anzahl Tanken für geplante km" />
+      <Button fx:id="btn_literAktuell" layoutX="46.0" layoutY="346.0" mnemonicParsing="false" onAction="#handleButtonClick" prefHeight="27.0" prefWidth="242.0" text="aktueller Füllstand" />
+      <Label layoutX="49.0" layoutY="396.0" text="Das Ergebnis:" />
       <TextArea fx:id="output_result" layoutX="44.0" layoutY="421.0" prefHeight="159.0" prefWidth="512.0" />
       <Line endX="470.0" layoutX="116.0" layoutY="218.0" startX="-100.0" />
       <Line endX="470.0" layoutX="116.0" layoutY="387.0" startX="-100.0" />
-      <MenuButton fx:id="myMenuButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="133.0" text="Benzinrechner">
+      <MenuButton fx:id="myMenuButton" layoutX="44.0" layoutY="29.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="242.0" text="Benzinrechner">
          <items>
             <MenuItem fx:id="home" mnemonicParsing="false" onAction="#handleMenuClick" text="Home" />
             <MenuItem fx:id="tictactoe" mnemonicParsing="false" onAction="#handleMenuClick" text="Tic Tac Toe" />
